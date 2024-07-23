@@ -20,11 +20,11 @@
 
 using std::vector;
 
-
+#define DEBUG 0
 #define MAX_COST 1e8
 #define PI 3.14159265358979323846
 // #define INF 1e8
-#define DEBUG 1
+
 
 typedef Eigen::SparseMatrix<double> SpMat; // 稀疏矩阵(默认行主序)
 

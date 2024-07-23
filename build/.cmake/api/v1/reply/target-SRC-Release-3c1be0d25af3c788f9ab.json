@@ -65,7 +65,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/mnt/e/vscode/vscode_c++/PanoWrapping/include"
+					"path" : "/mnt/e/CmakeDemo/PanoWrapping/include"
 				},
 				{
 					"backtrace" : 3,
@@ -104,7 +104,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/mnt/e/vscode/vscode_c++/PanoWrapping/include"
+					"path" : "/mnt/e/CmakeDemo/PanoWrapping/include"
 				},
 				{
 					"backtrace" : 3,

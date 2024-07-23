@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/e/vscode/vscode_c++/PanoWrapping
+CMAKE_SOURCE_DIR = /mnt/e/CmakeDemo/PanoWrapping
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/e/vscode/vscode_c++/PanoWrapping/build
+CMAKE_BINARY_DIR = /mnt/e/CmakeDemo/PanoWrapping/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SRC.dir/depend.make
@@ -72,72 +72,72 @@ include CMakeFiles/SRC.dir/flags.make
 CMakeFiles/SRC.dir/src/glad.c.o: CMakeFiles/SRC.dir/flags.make
 CMakeFiles/SRC.dir/src/glad.c.o: ../src/glad.c
 CMakeFiles/SRC.dir/src/glad.c.o: CMakeFiles/SRC.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/vscode/vscode_c++/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/SRC.dir/src/glad.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SRC.dir/src/glad.c.o -MF CMakeFiles/SRC.dir/src/glad.c.o.d -o CMakeFiles/SRC.dir/src/glad.c.o -c /mnt/e/vscode/vscode_c++/PanoWrapping/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/SRC.dir/src/glad.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SRC.dir/src/glad.c.o -MF CMakeFiles/SRC.dir/src/glad.c.o.d -o CMakeFiles/SRC.dir/src/glad.c.o -c /mnt/e/CmakeDemo/PanoWrapping/src/glad.c
 
 CMakeFiles/SRC.dir/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SRC.dir/src/glad.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/e/vscode/vscode_c++/PanoWrapping/src/glad.c > CMakeFiles/SRC.dir/src/glad.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/e/CmakeDemo/PanoWrapping/src/glad.c > CMakeFiles/SRC.dir/src/glad.c.i
 
 CMakeFiles/SRC.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SRC.dir/src/glad.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/e/vscode/vscode_c++/PanoWrapping/src/glad.c -o CMakeFiles/SRC.dir/src/glad.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/e/CmakeDemo/PanoWrapping/src/glad.c -o CMakeFiles/SRC.dir/src/glad.c.s
 
 CMakeFiles/SRC.dir/src/config.cpp.o: CMakeFiles/SRC.dir/flags.make
 CMakeFiles/SRC.dir/src/config.cpp.o: ../src/config.cpp
 CMakeFiles/SRC.dir/src/config.cpp.o: CMakeFiles/SRC.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/vscode/vscode_c++/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SRC.dir/src/config.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SRC.dir/src/config.cpp.o -MF CMakeFiles/SRC.dir/src/config.cpp.o.d -o CMakeFiles/SRC.dir/src/config.cpp.o -c /mnt/e/vscode/vscode_c++/PanoWrapping/src/config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SRC.dir/src/config.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SRC.dir/src/config.cpp.o -MF CMakeFiles/SRC.dir/src/config.cpp.o.d -o CMakeFiles/SRC.dir/src/config.cpp.o -c /mnt/e/CmakeDemo/PanoWrapping/src/config.cpp
 
 CMakeFiles/SRC.dir/src/config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SRC.dir/src/config.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/vscode/vscode_c++/PanoWrapping/src/config.cpp > CMakeFiles/SRC.dir/src/config.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/CmakeDemo/PanoWrapping/src/config.cpp > CMakeFiles/SRC.dir/src/config.cpp.i
 
 CMakeFiles/SRC.dir/src/config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SRC.dir/src/config.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/vscode/vscode_c++/PanoWrapping/src/config.cpp -o CMakeFiles/SRC.dir/src/config.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/CmakeDemo/PanoWrapping/src/config.cpp -o CMakeFiles/SRC.dir/src/config.cpp.s
 
 CMakeFiles/SRC.dir/src/localwrap.cpp.o: CMakeFiles/SRC.dir/flags.make
 CMakeFiles/SRC.dir/src/localwrap.cpp.o: ../src/localwrap.cpp
 CMakeFiles/SRC.dir/src/localwrap.cpp.o: CMakeFiles/SRC.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/vscode/vscode_c++/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SRC.dir/src/localwrap.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SRC.dir/src/localwrap.cpp.o -MF CMakeFiles/SRC.dir/src/localwrap.cpp.o.d -o CMakeFiles/SRC.dir/src/localwrap.cpp.o -c /mnt/e/vscode/vscode_c++/PanoWrapping/src/localwrap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SRC.dir/src/localwrap.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SRC.dir/src/localwrap.cpp.o -MF CMakeFiles/SRC.dir/src/localwrap.cpp.o.d -o CMakeFiles/SRC.dir/src/localwrap.cpp.o -c /mnt/e/CmakeDemo/PanoWrapping/src/localwrap.cpp
 
 CMakeFiles/SRC.dir/src/localwrap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SRC.dir/src/localwrap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/vscode/vscode_c++/PanoWrapping/src/localwrap.cpp > CMakeFiles/SRC.dir/src/localwrap.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/CmakeDemo/PanoWrapping/src/localwrap.cpp > CMakeFiles/SRC.dir/src/localwrap.cpp.i
 
 CMakeFiles/SRC.dir/src/localwrap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SRC.dir/src/localwrap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/vscode/vscode_c++/PanoWrapping/src/localwrap.cpp -o CMakeFiles/SRC.dir/src/localwrap.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/CmakeDemo/PanoWrapping/src/localwrap.cpp -o CMakeFiles/SRC.dir/src/localwrap.cpp.s
 
 CMakeFiles/SRC.dir/src/lsd.cpp.o: CMakeFiles/SRC.dir/flags.make
 CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp
 CMakeFiles/SRC.dir/src/lsd.cpp.o: CMakeFiles/SRC.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/vscode/vscode_c++/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SRC.dir/src/lsd.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SRC.dir/src/lsd.cpp.o -MF CMakeFiles/SRC.dir/src/lsd.cpp.o.d -o CMakeFiles/SRC.dir/src/lsd.cpp.o -c /mnt/e/vscode/vscode_c++/PanoWrapping/src/lsd.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SRC.dir/src/lsd.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SRC.dir/src/lsd.cpp.o -MF CMakeFiles/SRC.dir/src/lsd.cpp.o.d -o CMakeFiles/SRC.dir/src/lsd.cpp.o -c /mnt/e/CmakeDemo/PanoWrapping/src/lsd.cpp
 
 CMakeFiles/SRC.dir/src/lsd.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SRC.dir/src/lsd.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/vscode/vscode_c++/PanoWrapping/src/lsd.cpp > CMakeFiles/SRC.dir/src/lsd.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/CmakeDemo/PanoWrapping/src/lsd.cpp > CMakeFiles/SRC.dir/src/lsd.cpp.i
 
 CMakeFiles/SRC.dir/src/lsd.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SRC.dir/src/lsd.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/vscode/vscode_c++/PanoWrapping/src/lsd.cpp -o CMakeFiles/SRC.dir/src/lsd.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/CmakeDemo/PanoWrapping/src/lsd.cpp -o CMakeFiles/SRC.dir/src/lsd.cpp.s
 
 CMakeFiles/SRC.dir/src/globalwrap.cpp.o: CMakeFiles/SRC.dir/flags.make
 CMakeFiles/SRC.dir/src/globalwrap.cpp.o: ../src/globalwrap.cpp
 CMakeFiles/SRC.dir/src/globalwrap.cpp.o: CMakeFiles/SRC.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/vscode/vscode_c++/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SRC.dir/src/globalwrap.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SRC.dir/src/globalwrap.cpp.o -MF CMakeFiles/SRC.dir/src/globalwrap.cpp.o.d -o CMakeFiles/SRC.dir/src/globalwrap.cpp.o -c /mnt/e/vscode/vscode_c++/PanoWrapping/src/globalwrap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SRC.dir/src/globalwrap.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SRC.dir/src/globalwrap.cpp.o -MF CMakeFiles/SRC.dir/src/globalwrap.cpp.o.d -o CMakeFiles/SRC.dir/src/globalwrap.cpp.o -c /mnt/e/CmakeDemo/PanoWrapping/src/globalwrap.cpp
 
 CMakeFiles/SRC.dir/src/globalwrap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SRC.dir/src/globalwrap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/vscode/vscode_c++/PanoWrapping/src/globalwrap.cpp > CMakeFiles/SRC.dir/src/globalwrap.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/CmakeDemo/PanoWrapping/src/globalwrap.cpp > CMakeFiles/SRC.dir/src/globalwrap.cpp.i
 
 CMakeFiles/SRC.dir/src/globalwrap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SRC.dir/src/globalwrap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/vscode/vscode_c++/PanoWrapping/src/globalwrap.cpp -o CMakeFiles/SRC.dir/src/globalwrap.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/CmakeDemo/PanoWrapping/src/globalwrap.cpp -o CMakeFiles/SRC.dir/src/globalwrap.cpp.s
 
 # Object files for target SRC
 SRC_OBJECTS = \
@@ -157,7 +157,7 @@ libSRC.a: CMakeFiles/SRC.dir/src/lsd.cpp.o
 libSRC.a: CMakeFiles/SRC.dir/src/globalwrap.cpp.o
 libSRC.a: CMakeFiles/SRC.dir/build.make
 libSRC.a: CMakeFiles/SRC.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/e/vscode/vscode_c++/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libSRC.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libSRC.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/SRC.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SRC.dir/link.txt --verbose=$(VERBOSE)
 
@@ -170,6 +170,6 @@ CMakeFiles/SRC.dir/clean:
 .PHONY : CMakeFiles/SRC.dir/clean
 
 CMakeFiles/SRC.dir/depend:
-	cd /mnt/e/vscode/vscode_c++/PanoWrapping/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/e/vscode/vscode_c++/PanoWrapping /mnt/e/vscode/vscode_c++/PanoWrapping /mnt/e/vscode/vscode_c++/PanoWrapping/build /mnt/e/vscode/vscode_c++/PanoWrapping/build /mnt/e/vscode/vscode_c++/PanoWrapping/build/CMakeFiles/SRC.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/e/CmakeDemo/PanoWrapping/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/e/CmakeDemo/PanoWrapping /mnt/e/CmakeDemo/PanoWrapping /mnt/e/CmakeDemo/PanoWrapping/build /mnt/e/CmakeDemo/PanoWrapping/build /mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles/SRC.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SRC.dir/depend
 

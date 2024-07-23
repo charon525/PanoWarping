@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/e/vscode/vscode_c++/PanoWrapping
+# Install script for directory: /mnt/e/CmakeDemo/PanoWrapping
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/e/vscode/vscode_c++/PanoWrapping/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/e/CmakeDemo/PanoWrapping/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/e/vscode/vscode_c++/PanoWrapping/build"
+			"value" : "/mnt/e/CmakeDemo/PanoWrapping/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -591,7 +591,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/e/vscode/vscode_c++/PanoWrapping"
+			"value" : "/mnt/e/CmakeDemo/PanoWrapping"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1739,7 +1739,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/e/vscode/vscode_c++/PanoWrapping/build"
+			"value" : "/mnt/e/CmakeDemo/PanoWrapping/build"
 		},
 		{
 			"name" : "PanoWrapping_IS_TOP_LEVEL",
@@ -1763,7 +1763,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/e/vscode/vscode_c++/PanoWrapping"
+			"value" : "/mnt/e/CmakeDemo/PanoWrapping"
 		},
 		{
 			"name" : "__pkg_config_checked_GLUT",

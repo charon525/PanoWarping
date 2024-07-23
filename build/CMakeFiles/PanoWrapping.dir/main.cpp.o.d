@@ -1,7 +1,6 @@
 CMakeFiles/PanoWrapping.dir/main.cpp.o: \
- /mnt/e/vscode/vscode_c++/PanoWrapping/main.cpp \
- /usr/include/stdc-predef.h \
- /mnt/e/vscode/vscode_c++/PanoWrapping/include/config.h \
+ /mnt/e/CmakeDemo/PanoWrapping/main.cpp /usr/include/stdc-predef.h \
+ /mnt/e/CmakeDemo/PanoWrapping/include/config.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -462,8 +461,8 @@ CMakeFiles/PanoWrapping.dir/main.cpp.o: \
  /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
  /usr/local/include/opencv4/opencv2/videoio.hpp \
  /usr/local/include/opencv4/opencv2/imgproc.hpp \
- /mnt/e/vscode/vscode_c++/PanoWrapping/include/localwrap.h \
- /mnt/e/vscode/vscode_c++/PanoWrapping/include/globalwrap.h \
+ /mnt/e/CmakeDemo/PanoWrapping/include/localwrap.h \
+ /mnt/e/CmakeDemo/PanoWrapping/include/globalwrap.h \
  /usr/include/eigen3/Eigen/Dense /usr/include/eigen3/Eigen/LU \
  /usr/include/eigen3/Eigen/src/misc/Kernel.h \
  /usr/include/eigen3/Eigen/src/misc/Image.h \

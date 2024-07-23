@@ -41,14 +41,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "PanoWrapping::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-PanoWrapping-Release-610c6b15578e439e5327.json",
+					"jsonFile" : "target-PanoWrapping-Release-216c31d390b44db8e121.json",
 					"name" : "PanoWrapping",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "SRC::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SRC-Release-c4e1f3bb3d0fac7ad4f5.json",
+					"jsonFile" : "target-SRC-Release-3c1be0d25af3c788f9ab.json",
 					"name" : "SRC",
 					"projectIndex" : 0
 				}
@@ -58,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/mnt/e/vscode/vscode_c++/PanoWrapping/build",
-		"source" : "/mnt/e/vscode/vscode_c++/PanoWrapping"
+		"build" : "/mnt/e/CmakeDemo/PanoWrapping/build",
+		"source" : "/mnt/e/CmakeDemo/PanoWrapping"
 	},
 	"version" : 
 	{
