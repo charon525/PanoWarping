@@ -1,0 +1,4 @@
+/mnt/e/vscode/vscode_c++/PanoWrapping/build/CMakeFiles/SRC.dir
+/mnt/e/vscode/vscode_c++/PanoWrapping/build/CMakeFiles/PanoWrapping.dir
+/mnt/e/vscode/vscode_c++/PanoWrapping/build/CMakeFiles/edit_cache.dir
+/mnt/e/vscode/vscode_c++/PanoWrapping/build/CMakeFiles/rebuild_cache.dir

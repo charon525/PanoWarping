@@ -1,0 +1,42 @@
+cmake_minimum_required(VERSION 3.10)
+project(PanoWrapping)
+
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+set(SRC
+    src/glad.c
+    src/config.cpp
+    src/localwrap.cpp
+    src/lsd.cpp
+    src/globalwrap.cpp
+    # src/optimize.cpp
+)
+
+add_library(SRC STATIC ${SRC})
+
+set(SOURCES
+    main.cpp
+)
+
+find_package(glfw3 REQUIRED)
+find_package(OpenCV REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+
+include_directories(${OpenCV_INCLUDE_DIRS})
+include_directories(${EIGEN3_INCLUDE_DIR})
+
+add_executable(${PROJECT_NAME} ${SOURCES})
+target_link_libraries(${PROJECT_NAME}
+    SRC
+    glfw
+    ${OpenCV_LIBS}
+    Eigen3::Eigen
+    ${OPENGL_LIBRARIES}
+    ${GLUT_LIBRARY}
+)
