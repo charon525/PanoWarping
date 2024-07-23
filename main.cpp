@@ -18,7 +18,6 @@ double scale_factor = 1;
 
 // 纹理贴图相关
 GLuint matToTexture(cv::Mat& mat, GLenum minFilter = GL_LINEAR, GLenum magFilter = GL_LINEAR, GLenum wrapFilter = GL_CLAMP);
-void saveOpenGLScreenshot(const char* filename, int width, int height);
 void display();
 
 // 后处理
@@ -311,10 +310,20 @@ void display()
 	}
     
 	glDisable(GL_TEXTURE_2D);
+    // 创建一个Mat对象来存储渲染结果
+    // cv::Mat renderedImage(img.rows, img.cols, CV_8UC3);
+
+    // // 从OpenGL帧缓冲区读取像素数据
+    // glPixelTransferf(GL_RED_SCALE, 1.0f);
+    // glPixelTransferf(GL_GREEN_SCALE, 1.0f);
+    // glPixelTransferf(GL_BLUE_SCALE, 1.0f);
+    // glReadPixels(0, 0, img.cols, img.rows, GL_BGR, GL_UNSIGNED_BYTE, renderedImage.data);
+
+    // flip(renderedImage, renderedImage, 0);
+    // // 保存渲染结果
+    // cv::imwrite("../res/src_WrapResult.png", renderedImage);
     
 	glutSwapBuffers();
-    // 在渲染完成后，但在glutSwapBuffers()之前调用
-    // saveOpenGLScreenshot("../res/src_WrapResult.png", img.cols, img.rows);
 }
 
 void post_Process(double& sx_avg, double& sy_avg){
@@ -368,22 +377,3 @@ void printProgressBar(int current, int total, int width) {
 }
 
 
-void saveOpenGLScreenshot(const char* filename, int width, int height) {
-    // 分配内存来存储像素数据
-    std::vector<unsigned char> pixels(width * height * 3);
-
-    // 读取帧缓冲区的内容
-    glReadPixels(0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, pixels.data());
-
-    // 创建OpenCV Mat对象
-    cv::Mat image(height, width, CV_8UC3, pixels.data());
-
-    // OpenGL和OpenCV的坐标系不同，需要垂直翻转图像
-    cv::flip(image, image, 0);
-
-    // 将BGR转换为RGB（如果需要的话）
-    cv::cvtColor(image, image, cv::COLOR_BGR2RGB);
-
-    // 保存图像
-    cv::imwrite(filename, image);
-}

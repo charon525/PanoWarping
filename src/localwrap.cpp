@@ -1,25 +1,10 @@
 #include "localwrap.h"
 #include "config.h"
-#include <algorithm>
-#include <opencv2/imgproc.hpp>
-#include <opencv2/highgui.hpp>
-#include <opencv2/opencv.hpp>
 
 #define IS_MISSINGPIXEL(mask, row, col) (mask.at<uchar>(row, col) != 0)
 
 using namespace cv;
 using namespace std;
-
-const Mat sobelVer = (Mat_<double>(3, 3) <<
-    -1, -2, -1,
-    0, 0, 0,
-    1, 2, 1
-);
-const Mat sobelHor = (Mat_<double>(3, 3) <<
-    -1, 0, 1,
-    -2, 0, 2,
-    -1, 0, 1
-);
 
 /**
  * 获得能量矩阵

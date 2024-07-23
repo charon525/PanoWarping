@@ -1,8 +1,6 @@
 #include "globalwrap.h"
 #include "lsd.h"
 #include "config.h"
-#include <opencv2/imgproc.hpp>
-#include <opencv2/highgui.hpp>
 
 
 using namespace cv;

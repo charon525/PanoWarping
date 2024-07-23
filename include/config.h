@@ -11,6 +11,7 @@
 #include <iomanip>
 #include <cmath>
 #include <string>
+#include <vector>
 
 #include <Eigen/SparseCholesky>
 #include <Eigen/Sparse> // 稀疏矩阵
