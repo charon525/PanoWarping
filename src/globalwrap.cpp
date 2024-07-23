@@ -536,7 +536,7 @@ SpMat GlobalWrap::get_LineE_Matrix(const vector< vector<CoordinateDouble>>& mesh
                         if((startp_ans.norm() > 0.0001 || endp_ans.norm() > 0.0001)){
                             //错误情况
                             bad.push_back(true);
-                            BiWeightsVec.push_back(make_pair(MatrixXd::Zero(2, 8), MatrixXd::Zero(2, 8)));
+                            // BiWeightsVec.push_back(make_pair(MatrixXd::Zero(2, 8), MatrixXd::Zero(2, 8)));
                             continue;
                         }else{
                             bad.push_back(false);

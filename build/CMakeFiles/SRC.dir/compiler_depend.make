@@ -524,93 +524,7 @@ CMakeFiles/SRC.dir/src/config.cpp.o: ../src/config.cpp \
   /usr/local/include/opencv4/opencv2/core/cvdef.h \
   /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
   /usr/local/include/opencv4/opencv2/videoio.hpp \
-  /usr/local/include/opencv4/opencv2/imgproc.hpp \
-  /usr/local/include/opencv4/opencv2/opencv.hpp \
-  /usr/local/include/opencv4/opencv2/calib3d.hpp \
-  /usr/local/include/opencv4/opencv2/features2d.hpp \
-  /usr/local/include/opencv4/opencv2/flann/miniflann.hpp \
-  /usr/local/include/opencv4/opencv2/flann/defines.h \
-  /usr/local/include/opencv4/opencv2/flann/config.h \
-  /usr/local/include/opencv4/opencv2/core/affine.hpp \
-  /usr/local/include/opencv4/opencv2/dnn.hpp \
-  /usr/local/include/opencv4/opencv2/dnn/dnn.hpp \
-  /usr/local/include/opencv4/opencv2/core/async.hpp \
-  /usr/local/include/opencv4/opencv2/dnn/version.hpp \
-  /usr/local/include/opencv4/opencv2/dnn/dict.hpp \
-  /usr/local/include/opencv4/opencv2/dnn/layer.hpp \
-  /usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp \
-  /usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
-  /usr/local/include/opencv4/opencv2/dnn/dnn.hpp \
-  /usr/local/include/opencv4/opencv2/flann.hpp \
-  /usr/local/include/opencv4/opencv2/flann/flann_base.hpp \
-  /usr/local/include/opencv4/opencv2/flann/general.h \
-  /usr/local/include/opencv4/opencv2/flann/matrix.h \
-  /usr/local/include/opencv4/opencv2/flann/params.h \
-  /usr/local/include/opencv4/opencv2/flann/any.h \
-  /usr/local/include/opencv4/opencv2/flann/defines.h \
-  /usr/local/include/opencv4/opencv2/flann/saving.h \
-  /usr/local/include/opencv4/opencv2/flann/nn_index.h \
-  /usr/local/include/opencv4/opencv2/flann/result_set.h \
-  /usr/include/c++/11/set \
-  /usr/include/c++/11/bits/stl_set.h \
-  /usr/include/c++/11/bits/stl_multiset.h \
-  /usr/local/include/opencv4/opencv2/flann/all_indices.h \
-  /usr/local/include/opencv4/opencv2/flann/kdtree_index.h \
-  /usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h \
-  /usr/local/include/opencv4/opencv2/flann/dist.h \
-  /usr/local/include/opencv4/opencv2/flann/heap.h \
-  /usr/local/include/opencv4/opencv2/flann/allocator.h \
-  /usr/local/include/opencv4/opencv2/flann/random.h \
-  /usr/local/include/opencv4/opencv2/flann/kdtree_single_index.h \
-  /usr/local/include/opencv4/opencv2/flann/kmeans_index.h \
-  /usr/local/include/opencv4/opencv2/flann/logger.h \
-  /usr/local/include/opencv4/opencv2/flann/composite_index.h \
-  /usr/local/include/opencv4/opencv2/flann/linear_index.h \
-  /usr/local/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
-  /usr/local/include/opencv4/opencv2/flann/lsh_index.h \
-  /usr/local/include/opencv4/opencv2/flann/lsh_table.h \
-  /usr/include/c++/11/unordered_map \
-  /usr/include/c++/11/bits/hashtable.h \
-  /usr/include/c++/11/bits/hashtable_policy.h \
-  /usr/include/c++/11/bits/enable_special_members.h \
-  /usr/include/c++/11/bits/unordered_map.h \
-  /usr/include/c++/11/math.h \
-  /usr/local/include/opencv4/opencv2/flann/autotuned_index.h \
-  /usr/local/include/opencv4/opencv2/flann/ground_truth.h \
-  /usr/local/include/opencv4/opencv2/flann/index_testing.h \
-  /usr/local/include/opencv4/opencv2/flann/timer.h \
-  /usr/local/include/opencv4/opencv2/flann/sampling.h \
-  /usr/local/include/opencv4/opencv2/ml.hpp \
-  /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp \
-  /usr/local/include/opencv4/opencv2/objdetect.hpp \
-  /usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
-  /usr/local/include/opencv4/opencv2/photo.hpp \
-  /usr/local/include/opencv4/opencv2/stitching.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/warpers.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp \
-  /usr/local/include/opencv4/opencv2/core/cuda.hpp \
-  /usr/local/include/opencv4/opencv2/core/cuda_types.hpp \
-  /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/util.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
-  /usr/include/c++/11/queue \
-  /usr/include/c++/11/deque \
-  /usr/include/c++/11/bits/stl_deque.h \
-  /usr/include/c++/11/bits/deque.tcc \
-  /usr/include/c++/11/bits/stl_queue.h \
-  /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp \
-  /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
-  /usr/local/include/opencv4/opencv2/video.hpp \
-  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
-  /usr/local/include/opencv4/opencv2/video/background_segm.hpp
+  /usr/local/include/opencv4/opencv2/imgproc.hpp
 
 CMakeFiles/SRC.dir/src/glad.c.o: ../src/glad.c \
   /usr/include/stdc-predef.h \
@@ -1905,11 +1819,17 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
 
+/usr/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
+
 /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h:
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
+
+/usr/include/c++/11/math.h:
+
+/usr/include/eigen3/Eigen/Eigenvalues:
 
 /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h:
 
@@ -1937,116 +1857,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h:
 
-/usr/include/eigen3/Eigen/src/Householder/Householder.h:
-
-/usr/include/eigen3/Eigen/Householder:
-
-/usr/include/eigen3/Eigen/Jacobi:
-
-/usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h:
-
-/usr/include/eigen3/Eigen/src/LU/arch/InverseSize4.h:
-
-/usr/include/eigen3/Eigen/src/LU/Determinant.h:
-
-/usr/include/eigen3/Eigen/src/misc/Image.h:
-
-/usr/include/eigen3/Eigen/src/misc/Kernel.h:
-
-/usr/include/eigen3/Eigen/LU:
-
-/usr/include/eigen3/Eigen/Dense:
-
-../src/globalwrap.cpp:
-
-/usr/local/include/glad/glad.h:
-
-../src/glad.c:
-
-/usr/local/include/opencv4/opencv2/video/tracking.hpp:
-
-/usr/local/include/opencv4/opencv2/video.hpp:
-
-/usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp:
-
-/usr/local/include/opencv4/opencv2/stitching/detail/seam_finders.hpp:
-
-/usr/local/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp:
-
-/usr/include/eigen3/Eigen/QR:
-
-/usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp:
-
-/usr/include/c++/11/bits/deque.tcc:
-
-/usr/include/c++/11/bits/stl_deque.h:
-
-/usr/include/c++/11/deque:
-
-/usr/include/c++/11/queue:
-
-/usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp:
-
-/usr/local/include/opencv4/opencv2/stitching/detail/util.hpp:
-
-/usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp:
-
-/usr/local/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp:
-
-/usr/local/include/opencv4/opencv2/core/cuda.inl.hpp:
-
-/usr/local/include/opencv4/opencv2/core/cuda.hpp:
-
-/usr/local/include/opencv4/opencv2/stitching/warpers.hpp:
-
-/usr/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
-
-/usr/local/include/opencv4/opencv2/stitching.hpp:
-
-/usr/local/include/opencv4/opencv2/photo.hpp:
-
-/usr/local/include/opencv4/opencv2/objdetect.hpp:
-
-/usr/local/include/opencv4/opencv2/ml/ml.inl.hpp:
-
-/usr/local/include/opencv4/opencv2/ml.hpp:
-
-/usr/local/include/opencv4/opencv2/flann/timer.h:
-
-/usr/local/include/opencv4/opencv2/flann/index_testing.h:
-
-/usr/local/include/opencv4/opencv2/flann/autotuned_index.h:
-
-/usr/include/eigen3/Eigen/Eigenvalues:
-
-/usr/include/c++/11/math.h:
-
-/usr/include/c++/11/bits/unordered_map.h:
-
-/usr/include/c++/11/bits/enable_special_members.h:
-
-/usr/include/c++/11/bits/hashtable_policy.h:
-
-/usr/include/c++/11/bits/hashtable.h:
-
-/usr/include/c++/11/unordered_map:
-
-/usr/local/include/opencv4/opencv2/flann/hierarchical_clustering_index.h:
-
-/usr/local/include/opencv4/opencv2/flann/linear_index.h:
-
-/usr/local/include/opencv4/opencv2/flann/kmeans_index.h:
-
-/usr/local/include/opencv4/opencv2/flann/kdtree_single_index.h:
-
-/usr/local/include/opencv4/opencv2/flann/random.h:
-
-/usr/local/include/opencv4/opencv2/flann/heap.h:
-
-/usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h:
-
-/usr/local/include/opencv4/opencv2/flann/all_indices.h:
-
 /usr/include/c++/11/limits:
 
 /usr/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h:
@@ -2062,8 +1872,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h:
-
-/usr/local/include/opencv4/opencv2/flann/ground_truth.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
 
@@ -2081,11 +1889,7 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
-/usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h:
-
-/usr/include/eigen3/Eigen/src/LU/PartialPivLU.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+/usr/include/eigen3/Eigen/src/LU/Determinant.h:
 
 /usr/include/c++/11/cassert:
 
@@ -2123,8 +1927,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
 
-/usr/local/include/opencv4/opencv2/core/cuda_types.hpp:
-
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/istream:
@@ -2138,10 +1940,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
-
-/usr/include/eigen3/Eigen/src/Cholesky/LLT.h:
-
-/usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/string.h:
 
@@ -2171,9 +1969,11 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
-/usr/include/c++/11/cerrno:
+/usr/include/eigen3/Eigen/src/Core/Transpositions.h:
 
-/usr/local/include/opencv4/opencv2/flann/sampling.h:
+/usr/include/eigen3/Eigen/LU:
+
+/usr/include/c++/11/cerrno:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
@@ -2182,8 +1982,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/c++/11/bits/basic_ios.h:
 
 /usr/include/eigen3/Eigen/src/Core/Swap.h:
-
-/usr/local/include/opencv4/opencv2/flann/allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
@@ -2220,10 +2018,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/c++/11/string:
 
 /usr/include/c++/11/bits/locale_classes.h:
-
-/usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
-
-/usr/local/include/opencv4/opencv2/features2d.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
@@ -2263,25 +2057,17 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/time.h:
 
-/usr/include/eigen3/Eigen/Cholesky:
-
-/usr/include/c++/11/bits/invoke.h:
-
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/include/c++/11/ext/alloc_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/dlfcn.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
-
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
 /usr/include/c++/11/bits/locale_facets_nonio.h:
 
 /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h:
-
-/usr/local/include/opencv4/opencv2/flann/kdtree_index.h:
 
 /usr/include/c++/11/bits/ios_base.h:
 
@@ -2308,6 +2094,8 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/eigen3/Eigen/src/Core/StlIterators.h:
 
 /usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:
+
+/usr/include/eigen3/Eigen/src/misc/Image.h:
 
 /usr/include/c++/11/bits/streambuf.tcc:
 
@@ -2359,19 +2147,13 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/local/include/opencv4/opencv2/core/fast_math.hpp:
 
-/usr/local/include/opencv4/opencv2/flann/composite_index.h:
-
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
-/usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp:
-
 /usr/local/include/opencv4/opencv2/core/operations.hpp:
 
 /usr/include/c++/11/cmath:
-
-/usr/local/include/opencv4/opencv2/flann/logger.h:
 
 /usr/include/c++/11/bits/allocator.h:
 
@@ -2487,11 +2269,15 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/local/include/opencv4/opencv2/core/bufferpool.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h:
+
+/usr/include/eigen3/Eigen/src/LU/PartialPivLU.h:
+
 /usr/include/c++/11/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
-
-/usr/local/include/opencv4/opencv2/flann/dist.h:
 
 /usr/include/c++/11/bits/postypes.h:
 
@@ -2500,6 +2286,10 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/c++/11/cwctype:
+
+/usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h:
+
+/usr/include/eigen3/Eigen/src/LU/arch/InverseSize4.h:
 
 /usr/include/c++/11/iostream:
 
@@ -2528,12 +2318,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/c++/11/bits/stl_pair.h:
 
 /usr/include/c++/11/ctime:
-
-/usr/include/eigen3/Eigen/src/SVD/BDCSVD.h:
-
-../include/globalwrap.h:
-
-/usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
 
@@ -2573,6 +2357,8 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/DenseBase.h:
 
+/usr/include/eigen3/Eigen/Householder:
+
 /usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
@@ -2611,6 +2397,14 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
+/usr/include/eigen3/Eigen/src/SVD/BDCSVD.h:
+
+/usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
+
+../include/globalwrap.h:
+
+/usr/include/eigen3/Eigen/src/Core/SolveTriangular.h:
+
 /usr/include/c++/11/bits/locale_classes.tcc:
 
 /usr/include/c++/11/ext/aligned_buffer.h:
@@ -2619,8 +2413,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h:
 
-/usr/local/include/opencv4/opencv2/core/affine.hpp:
-
 /usr/include/c++/11/bits/std_function.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
@@ -2628,6 +2420,10 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/c++/11/bits/basic_string.h:
 
 /usr/include/c++/11/bits/shared_ptr_base.h:
+
+/usr/include/eigen3/Eigen/src/Geometry/Transform.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h:
 
@@ -2640,6 +2436,10 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/x86_64-linux-gnu/bits/select2.h:
 
 /usr/include/c++/11/cwchar:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h:
+
+/usr/include/GL/freeglut_std.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
@@ -2656,6 +2456,8 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h:
 
 /usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:
+
+/usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
 
 /usr/include/strings.h:
 
@@ -2674,8 +2476,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h:
-
-/usr/local/include/opencv4/opencv2/flann/saving.h:
 
 /usr/include/c++/11/bits/nested_exception.h:
 
@@ -2698,12 +2498,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h:
-
-/usr/include/GL/freeglut_std.h:
-
-/usr/local/include/opencv4/opencv2/dnn/version.hpp:
 
 /usr/include/c++/11/exception:
 
@@ -2741,8 +2535,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/util/Constants.h:
 
-/usr/local/include/opencv4/opencv2/flann/params.h:
-
 /usr/include/eigen3/Eigen/src/Core/util/Meta.h:
 
 /usr/include/c++/11/bits/ostream.tcc:
@@ -2769,10 +2561,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
 
-/usr/local/include/opencv4/opencv2/video/background_segm.hpp:
-
-/usr/include/c++/11/bits/stl_queue.h:
-
 /usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
@@ -2782,8 +2570,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h:
-
-/usr/local/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h:
 
@@ -2795,11 +2581,15 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:
 
+/usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:
+
+/usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h:
+
+/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h:
+
 /usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
-
-/usr/local/include/opencv4/opencv2/flann/lsh_index.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:
 
@@ -2808,10 +2598,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/eigen3/Eigen/src/Core/MapBase.h:
 
 /usr/local/include/opencv4/opencv2/core/ovx.hpp:
-
-/usr/include/eigen3/Eigen/src/Householder/BlockHouseholder.h:
-
-/usr/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h:
 
 /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h:
 
@@ -2825,12 +2611,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h:
 
-/usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/Transpositions.h:
-
-/usr/local/include/opencv4/opencv2/flann/result_set.h:
-
 /usr/include/eigen3/Eigen/src/Core/ArithmeticSequence.h:
 
 /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h:
@@ -2838,8 +2618,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
 /usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
-
-/usr/include/c++/11/bits/stl_multiset.h:
 
 /usr/local/include/opencv4/opencv2/core/hal/interface.h:
 
@@ -2865,13 +2643,13 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/DenseStorage.h:
 
-/usr/include/dlfcn.h:
-
-/usr/local/include/opencv4/opencv2/core/vsx_utils.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/NoAlias.h:
-
 /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
+
+/usr/include/c++/11/bits/cxxabi_forced.h:
+
+/usr/include/c++/11/bits/algorithmfwd.h:
+
+/usr/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
@@ -2887,10 +2665,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/Dot.h:
 
-/usr/include/eigen3/Eigen/src/QR/HouseholderQR.h:
-
-/usr/include/eigen3/Eigen/src/Core/Stride.h:
-
 /usr/include/eigen3/Eigen/src/Core/Map.h:
 
 /usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
@@ -2899,17 +2673,9 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/local/include/opencv4/opencv2/highgui.hpp:
 
-/usr/include/c++/11/bits/stl_set.h:
-
 /usr/include/eigen3/Eigen/src/Core/Block.h:
 
 /usr/include/eigen3/Eigen/src/Core/Reshaped.h:
-
-/usr/include/eigen3/Eigen/src/Geometry/Transform.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/c++/11/set:
 
 /usr/include/eigen3/Eigen/src/Core/Transpose.h:
 
@@ -2927,15 +2693,17 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
 
-/usr/include/eigen3/Eigen/src/LU/InverseImpl.h:
-
-/usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
-
 /usr/include/c++/11/atomic:
+
+/usr/include/eigen3/Eigen/QR:
 
 /usr/include/c++/11/bits/atomic_base.h:
 
 /usr/include/c++/11/bits/atomic_lockfree_defines.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
+
+/usr/include/x86_64-linux-gnu/bits/dlfcn.h:
 
 /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
 
@@ -2971,19 +2739,15 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
 
-/usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:
-
-/usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h:
-
-/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h:
-
-/usr/local/include/opencv4/opencv2/flann/config.h:
-
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
 
 /usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
+
+/usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
+
+/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h:
 
 /usr/include/c++/11/bits/locale_conv.h:
 
@@ -3007,19 +2771,21 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h:
 
+/usr/include/eigen3/Eigen/src/Core/Stride.h:
+
+/usr/include/eigen3/Eigen/src/QR/HouseholderQR.h:
+
 /usr/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h:
 
 /usr/include/eigen3/Eigen/src/SparseCore/SparseAssign.h:
 
 /usr/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h:
 
-/usr/local/include/opencv4/opencv2/dnn/dnn.hpp:
-
-/usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp:
-
 /usr/include/c++/11/cstdlib:
 
 /usr/include/eigen3/Eigen/src/SparseCore/AmbiVector.h:
+
+/usr/include/eigen3/Eigen/Dense:
 
 /usr/include/eigen3/Eigen/src/SparseCore/SparseMap.h:
 
@@ -3030,6 +2796,8 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/eigen3/Eigen/src/SparseCore/SparseBlock.h:
 
 /usr/include/eigen3/Eigen/src/SparseCore/SparseDot.h:
+
+../src/glad.c:
 
 /usr/include/eigen3/Eigen/src/Core/Diagonal.h:
 
@@ -3117,8 +2885,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h:
 
-/usr/local/include/opencv4/opencv2/flann/lsh_table.h:
-
 /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h:
 
 /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h:
@@ -3144,10 +2910,6 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
 /usr/include/c++/11/bits/align.h:
-
-/usr/include/eigen3/Eigen/src/Core/SolveTriangular.h:
-
-/usr/local/include/opencv4/opencv2/flann/any.h:
 
 /usr/include/c++/11/bit:
 
@@ -3183,42 +2945,34 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: ../src/lsd.cpp \
 
 /usr/local/include/opencv4/opencv2/videoio.hpp:
 
-/usr/local/include/opencv4/opencv2/opencv.hpp:
+/usr/local/include/glad/glad.h:
 
-/usr/include/c++/11/bits/cxxabi_forced.h:
+/usr/include/eigen3/Eigen/Jacobi:
 
-/usr/include/c++/11/bits/algorithmfwd.h:
+/usr/local/include/opencv4/opencv2/core/vsx_utils.hpp:
 
-/usr/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h:
+/usr/include/eigen3/Eigen/src/Core/NoAlias.h:
 
-/usr/local/include/opencv4/opencv2/flann/miniflann.hpp:
+/usr/include/dlfcn.h:
 
-/usr/local/include/opencv4/opencv2/flann/defines.h:
+../src/globalwrap.cpp:
 
-/usr/local/include/opencv4/opencv2/dnn.hpp:
+/usr/include/eigen3/Eigen/src/misc/Kernel.h:
 
-/usr/local/include/opencv4/opencv2/core/async.hpp:
+/usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
 
-/usr/local/include/opencv4/opencv2/dnn/dict.hpp:
+/usr/include/eigen3/Eigen/src/LU/InverseImpl.h:
 
-/usr/include/x86_64-linux-gnu/bits/wchar2.h:
+/usr/include/c++/11/bits/invoke.h:
 
-/usr/local/include/opencv4/opencv2/dnn/layer.hpp:
+/usr/include/eigen3/Eigen/Cholesky:
 
-/usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp:
+/usr/include/c++/11/bits/uniform_int_dist.h:
 
-/usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
+/usr/include/eigen3/Eigen/src/Cholesky/LLT.h:
 
-/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h:
+/usr/include/eigen3/Eigen/src/Householder/Householder.h:
 
-/usr/local/include/opencv4/opencv2/flann.hpp:
+/usr/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h:
 
-/usr/local/include/opencv4/opencv2/flann/flann_base.hpp:
-
-/usr/local/include/opencv4/opencv2/calib3d.hpp:
-
-/usr/local/include/opencv4/opencv2/flann/general.h:
-
-/usr/local/include/opencv4/opencv2/flann/matrix.h:
-
-/usr/local/include/opencv4/opencv2/flann/nn_index.h:
+/usr/include/eigen3/Eigen/src/Householder/BlockHouseholder.h:

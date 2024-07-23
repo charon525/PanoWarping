@@ -48,7 +48,13 @@ int main(int argc, char* argv[]) {
         cout << "Error: Could not read the image." << endl;
         return -1;
     }
+    
     printf("ImageSize: （%d, %d）\n", img.cols, img.rows);
+
+    cv::imshow("original image", img);
+    cv::waitKey(0);
+
+
     struct timeval start, end;
     gettimeofday(&start, nullptr); // 记录开始时间
 
