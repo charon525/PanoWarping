@@ -6,7 +6,7 @@ using namespace std;
 using namespace cv;
 
 Mat img;
-Config config ;
+Config config;
 LocalWrap localwrap;
 GlobalWrap globalwrap;
 vector<vector<CoordinateDouble>> outputmesh;
@@ -50,7 +50,6 @@ int main(int argc, char* argv[]) {
     }
     
     printf("ImageSize: （%d, %d）\n", img.cols, img.rows);
-
     cv::imshow("original image", img);
     cv::waitKey(0);
 
@@ -108,7 +107,6 @@ int main(int argc, char* argv[]) {
     cout<< "Start Optimize Implement ······· " <<endl;
     // 迭代优化
     for(int iter = 0; iter < config.iters; iter++){
-
         // line energy
         int lineNum;
         vector< pair<MatrixXd, MatrixXd>> BiWeightsVec;

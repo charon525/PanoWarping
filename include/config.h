@@ -59,30 +59,15 @@ template <typename T>
 class Coordinate{
 public:
     T row; T col;
-
     // 构造函数
     Coordinate() : row(0), col(0) {}
     Coordinate(T Row, T Col) : row(Row), col(Col) {}
 
-    // 重载 < 运算符
-    bool operator<(const Coordinate& c){
-        return row < c.row? true : (row > c.row? false : col < c.col);
-    }
-
-    // 重载 > 运算符
-    bool operator>(const Coordinate& c){
-        return row > c.row? true : (row < c.row? false : col > c.col);
-    }
-
-    // 重载 == 运算符
-    bool operator==(const Coordinate& c){
-        return row == c.row && col == c.col; 
-    }
     // 重载 - 运算符
     Coordinate operator-(const Coordinate& other) const {
         return Coordinate(row - other.row, col - other.col);
     }
-
+    // 重载 + 运算符
     Coordinate operator+(const Coordinate& other) const {
         return Coordinate(row + other.row, col + other.col);
     }
@@ -108,8 +93,15 @@ public:
 	StraightLine(CoordinateDouble P1, CoordinateDouble P2) : p1(P1), p2(P2){}
 };
 
+/**
+ * 初始化mask
+ */
 cv::Mat Init_Mask(const cv::Mat& src);
 
+
+/**
+ * 绘制直线
+ */
 void draw_StraightLine(cv::Mat& src, const StraightLine& line);
 
 /**
@@ -119,9 +111,9 @@ void draw_StraightLine(cv::Mat& src, const StraightLine& line);
  * @return 合并后的稀疏矩阵
  */
 SpMat mergeMatricesByRow(const SpMat& mat1, const SpMat& mat2);
-void scale_mesh(vector<vector<CoordinateDouble>>& mesh, double enlargeFacrtor_row, double  enlargeFacrtor_col, Config config);
 
-// GLuint matToTexture(cv::Mat& mat, GLenum minFilter = GL_LINEAR, GLenum magFilter = GL_LINEAR, GLenum wrapFilter = GL_CLAMP);
-
-
+/**
+ * 缩放图像
+ */
+void scale_mesh(vector<vector<CoordinateDouble>>& mesh, double scale_factor_row, double  scale_factor_col, Config config);
 #endif // CONFIG_H

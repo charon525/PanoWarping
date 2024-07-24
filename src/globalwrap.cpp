@@ -533,18 +533,15 @@ SpMat GlobalWrap::get_LineE_Matrix(const vector< vector<CoordinateDouble>>& mesh
                         VectorXd Vq = get_Vq(mesh, i, j);
                         Vector2d startp_ans = startPoint_Weights_Mat * Vq - Vector2d(startPoint.col, startPoint.row);
                         Vector2d endp_ans = endPoint_weights_Mat * Vq - Vector2d(endPoint.col, endPoint.row);
-                        if((startp_ans.norm() > 0.0001 || endp_ans.norm() > 0.0001)){
+                        if((startp_ans.norm() > 0.001 || endp_ans.norm() > 0.001)){
                             //错误情况
                             bad.push_back(true);
-                            // BiWeightsVec.push_back(make_pair(MatrixXd::Zero(2, 8), MatrixXd::Zero(2, 8)));
                             continue;
                         }else{
                             bad.push_back(false);
                             BiWeightsVec.push_back(make_pair(startPoint_Weights_Mat, endPoint_weights_Mat));
                         }
                         double theta = rotate_theta[lineNum];
-
-                        
 
                         // R矩阵
                         MatrixXd R(2, 2);
@@ -562,7 +559,6 @@ SpMat GlobalWrap::get_LineE_Matrix(const vector< vector<CoordinateDouble>>& mesh
 
                         // 按行合并，将C_e 合并到 C_quad_rowStack 下方
                         MatrixXd C_quad_rowStack_tmp(C_quad_rowStack.rows() + C_e.rows(), C_quad_rowStack.cols());
-
                         C_quad_rowStack_tmp.topRows(C_quad_rowStack.rows()) = C_quad_rowStack;
                         C_quad_rowStack_tmp.bottomRows(C_e.rows()) = C_e;
                         C_quad_rowStack = C_quad_rowStack_tmp;
@@ -662,8 +658,11 @@ void GlobalWrap::Show_StraightLines(cv::Mat src, vector< vector< vector<Straight
                 StraightLine line = lineSegmentsInQuad[i][j][k];
                 draw_StraightLine(src, line);
             }
-            cv::namedWindow("line", cv::WINDOW_AUTOSIZE);
-            cv::imshow("line", src);
+            if(DEBUG){
+                cv::namedWindow("line", cv::WINDOW_AUTOSIZE);
+                cv::imshow("line", src);
+            }
+
         }
     }
     if(DEBUG){

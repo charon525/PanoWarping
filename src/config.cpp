@@ -119,7 +119,7 @@ SpMat mergeMatricesByRow(const SpMat& mat1, const SpMat& mat2) {
 */
 
 using std::vector;
-void scale_mesh(vector<vector<CoordinateDouble>>& mesh, double enlargeFacrtor_row, double  enlargeFacrtor_col, Config config)
+void scale_mesh(vector<vector<CoordinateDouble>>& mesh, double scale_factor_row, double  scale_factor_col, Config config)
 {
 	int numMeshRow = config.meshRows;
 	int numMeshCol = config.meshCols;
@@ -128,8 +128,8 @@ void scale_mesh(vector<vector<CoordinateDouble>>& mesh, double enlargeFacrtor_ro
 		for (int col = 0; col < numMeshCol; col++)
 		{
 			CoordinateDouble& coord = mesh[row][col];
-			coord.row = coord.row * enlargeFacrtor_row;//row * enlargeFacrtor
-			coord.col = coord.col * enlargeFacrtor_col;//col * enlargeFacrtor
+			coord.row = coord.row * scale_factor_row;
+			coord.col = coord.col * scale_factor_col;
 		}
 	}
 }

@@ -13,7 +13,7 @@ using std::vector;
 using std::pair;
 #define clampValue(x, a, b) a < b? (x < a? a : (x > b? b : x)) : (x < b? b : (x < a? a : a))
 
-typedef Eigen::SparseMatrix<double> SpMat; // 稀疏矩阵(默认行主序)
+typedef Eigen::SparseMatrix<double> SpMat; // 稀疏矩阵
 typedef Eigen::VectorXd VectorXd;  //表示一个动态大小的double精度浮点数向量。
 typedef Eigen::MatrixXd MatrixXd;  // 表示一个动态大小的double精度浮点数矩阵。
 typedef Eigen::Vector2d Vector2d; // 表示一个2维的double精度浮点数向量。
@@ -27,8 +27,7 @@ public:
 };
 
 class  GlobalWrap{
-// private:
-public:
+private:
     /**
      * 应用lsd算法检测源图像中的直线
      */
@@ -50,7 +49,7 @@ public:
     vector<CoordinateDouble> get_IntersectionWithQuad(const StraightLine& line, const vector<CoordinateDouble>& quadVertexes);
 
     /**
-     * 计算 点point与quad的双线性插值系数
+     * 计算 点point与quad的(逆)双线性插值系数
      */
     BilinearWeights get_BiWeights_PointQuad(const CoordinateDouble& point, const vector<CoordinateDouble>& quadVertexes);
 
@@ -65,7 +64,7 @@ public:
     SpMat SpMat_extendByDiagonal(const SpMat& mat, const MatrixXd& add, int QuadIdx, const Config& config);
 
 
-
+public:
     
     /**
      * shape energy

@@ -295,27 +295,30 @@ vector<vector<CoordinateInt>> LocalWrap::get_displacementField(Mat& src, Mat& ma
         }
 
         
-        // 确保src和mask具有相同的类型和通道数
-        Mat src_display, mask_display;
-        if (src.channels() == 1) {
-            cvtColor(src, src_display, cv::COLOR_GRAY2BGR);
-        } else {
-            src.copyTo(src_display);
-        }
-        if (mask.channels() == 1) {
-            cvtColor(mask, mask_display, cv::COLOR_GRAY2BGR);
-        } else {
-            mask.copyTo(mask_display);
-        }
-        // 确保两个图像具有相同的大小
-        cv::resize(mask_display, mask_display, src_display.size());
-        // 将src_display和mask_display水平连接
-        Mat combined;
-        hconcat(src_display, mask_display, combined);
-        // 显示合并后的图像
-        cv::imshow("LocalWrap Process Result", combined);
-        if(DEBUG)
+
+        if(DEBUG){
+            // 确保src和mask具有相同的类型和通道数
+            Mat src_display, mask_display;
+            if (src.channels() == 1) {
+                cvtColor(src, src_display, cv::COLOR_GRAY2BGR);
+            } else {
+                src.copyTo(src_display);
+            }
+            if (mask.channels() == 1) {
+                cvtColor(mask, mask_display, cv::COLOR_GRAY2BGR);
+            } else {
+                mask.copyTo(mask_display);
+            }
+            // 确保两个图像具有相同的大小
+            cv::resize(mask_display, mask_display, src_display.size());
+            // 将src_display和mask_display水平连接
+            Mat combined;
+            hconcat(src_display, mask_display, combined);
+            // 显示合并后的图像
+            cv::imshow("LocalWrap Process Result", combined);
             cv::waitKey(1);
+        }
+            
     }
     cv::imwrite("../res/src_SeamPaths.png", src_SeamPath);
     if(DEBUG){
@@ -425,11 +428,9 @@ vector<int> LocalWrap::get_Seam_Path_Horizontal(Mat src, Mat mask, int seam_type
     cv::Mat subImg = src(subImgROI);
     cv::Mat subMask = mask(subImgROI);
     
-    
-
     Mat Energy_map, from;
     Energy_map = get_EnergyMap(subImg);
-    from.create(subImg.size(), CV_32SC1); // sub-image
+    from.create(subImg.size(), CV_32SC1); 
 
     for (int i = 0; i < subImg.rows; i++) {
         for (int j = 0; j < subImg.cols; j++) {
