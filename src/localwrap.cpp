@@ -13,9 +13,16 @@ Mat LocalWrap::get_EnergyMap(const Mat& src)
 {
     Mat gray;
     cvtColor(src, gray, cv::COLOR_BGR2GRAY);
-
     int rows = src.rows, cols = src.cols;
     Mat energy_map(rows, cols, CV_64FC1, Scalar(0.0));
+
+    // Backward Energy (Original Seam Carving)
+    // Mat grad_x, grad_y;
+    // Sobel(gray, grad_x, CV_64F, 1, 0, 3);
+    // Sobel(gray, grad_y, CV_64F, 0, 1, 3);
+    // magnitude(grad_x, grad_y, energy_map);
+
+    // Forward Energy (Imporved Seam Carving)
     Mat M(rows, cols, CV_64FC1, Scalar(0.0));
     for(int i=1; i<rows; i++){
         for(int j=1; j<cols; j++){
@@ -41,6 +48,7 @@ Mat LocalWrap::get_EnergyMap(const Mat& src)
             energy_map.at<double>(i, j) = cULR[argmin];
         }
     }
+
     return energy_map;
 }
 
