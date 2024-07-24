@@ -65,7 +65,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/mnt/e/CmakeDemo/PanoWrapping/include"
+					"path" : "/mnt/e/vscode/vscode_c++/PanoWarping/include"
 				},
 				{
 					"backtrace" : 3,
@@ -104,7 +104,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/mnt/e/CmakeDemo/PanoWrapping/include"
+					"path" : "/mnt/e/vscode/vscode_c++/PanoWarping/include"
 				},
 				{
 					"backtrace" : 3,
@@ -172,7 +172,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
-			"path" : "src/localwrap.cpp",
+			"path" : "src/localwarp.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -184,7 +184,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
-			"path" : "src/globalwrap.cpp",
+			"path" : "src/globalwarp.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

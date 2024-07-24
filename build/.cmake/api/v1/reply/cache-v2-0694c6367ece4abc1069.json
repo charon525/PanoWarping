@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/e/CmakeDemo/PanoWrapping/build"
+			"value" : "/mnt/e/vscode/vscode_c++/PanoWarping/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -514,6 +514,10 @@
 			"properties" : 
 			[
 				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
 					"name" : "HELPSTRING",
 					"value" : "No help, variable specified on the command line."
 				}
@@ -591,7 +595,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/e/CmakeDemo/PanoWrapping"
+			"value" : "/mnt/e/vscode/vscode_c++/PanoWarping"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -835,7 +839,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "PanoWrapping"
+			"value" : "PanoWarping"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1730,7 +1734,7 @@
 			"value" : "/usr/bin/pkg-config"
 		},
 		{
-			"name" : "PanoWrapping_BINARY_DIR",
+			"name" : "PanoWarping_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1739,10 +1743,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/e/CmakeDemo/PanoWrapping/build"
+			"value" : "/mnt/e/vscode/vscode_c++/PanoWarping/build"
 		},
 		{
-			"name" : "PanoWrapping_IS_TOP_LEVEL",
+			"name" : "PanoWarping_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1754,7 +1758,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "PanoWrapping_SOURCE_DIR",
+			"name" : "PanoWarping_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1763,7 +1767,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/e/CmakeDemo/PanoWrapping"
+			"value" : "/mnt/e/vscode/vscode_c++/PanoWarping"
 		},
 		{
 			"name" : "__pkg_config_checked_GLUT",

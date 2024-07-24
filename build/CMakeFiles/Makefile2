@@ -54,17 +54,17 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/e/CmakeDemo/PanoWrapping
+CMAKE_SOURCE_DIR = /mnt/e/vscode/vscode_c++/PanoWarping
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/e/CmakeDemo/PanoWrapping/build
+CMAKE_BINARY_DIR = /mnt/e/vscode/vscode_c++/PanoWarping/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/SRC.dir/all
-all: CMakeFiles/PanoWrapping.dir/all
+all: CMakeFiles/PanoWarping.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,7 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/SRC.dir/clean
-clean: CMakeFiles/PanoWrapping.dir/clean
+clean: CMakeFiles/PanoWarping.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -83,14 +83,14 @@ clean: CMakeFiles/PanoWrapping.dir/clean
 CMakeFiles/SRC.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target SRC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target SRC"
 .PHONY : CMakeFiles/SRC.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SRC.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SRC.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles 0
 .PHONY : CMakeFiles/SRC.dir/rule
 
 # Convenience name for target.
@@ -103,30 +103,30 @@ CMakeFiles/SRC.dir/clean:
 .PHONY : CMakeFiles/SRC.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/PanoWrapping.dir
+# Target rules for target CMakeFiles/PanoWarping.dir
 
 # All Build rule for target.
-CMakeFiles/PanoWrapping.dir/all: CMakeFiles/SRC.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWrapping.dir/build.make CMakeFiles/PanoWrapping.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWrapping.dir/build.make CMakeFiles/PanoWrapping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles --progress-num=1,2 "Built target PanoWrapping"
-.PHONY : CMakeFiles/PanoWrapping.dir/all
+CMakeFiles/PanoWarping.dir/all: CMakeFiles/SRC.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWarping.dir/build.make CMakeFiles/PanoWarping.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWarping.dir/build.make CMakeFiles/PanoWarping.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles --progress-num=1,2 "Built target PanoWarping"
+.PHONY : CMakeFiles/PanoWarping.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/PanoWrapping.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PanoWrapping.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles 0
-.PHONY : CMakeFiles/PanoWrapping.dir/rule
+CMakeFiles/PanoWarping.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PanoWarping.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles 0
+.PHONY : CMakeFiles/PanoWarping.dir/rule
 
 # Convenience name for target.
-PanoWrapping: CMakeFiles/PanoWrapping.dir/rule
-.PHONY : PanoWrapping
+PanoWarping: CMakeFiles/PanoWarping.dir/rule
+.PHONY : PanoWarping
 
 # clean rule for target.
-CMakeFiles/PanoWrapping.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWrapping.dir/build.make CMakeFiles/PanoWrapping.dir/clean
-.PHONY : CMakeFiles/PanoWrapping.dir/clean
+CMakeFiles/PanoWarping.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWarping.dir/build.make CMakeFiles/PanoWarping.dir/clean
+.PHONY : CMakeFiles/PanoWarping.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

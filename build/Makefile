@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/e/CmakeDemo/PanoWrapping
+CMAKE_SOURCE_DIR = /mnt/e/vscode/vscode_c++/PanoWarping
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/e/CmakeDemo/PanoWrapping/build
+CMAKE_BINARY_DIR = /mnt/e/vscode/vscode_c++/PanoWarping/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles /mnt/e/CmakeDemo/PanoWrapping/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles /mnt/e/vscode/vscode_c++/PanoWarping/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,24 +130,24 @@ SRC/fast:
 .PHONY : SRC/fast
 
 #=============================================================================
-# Target rules for targets named PanoWrapping
+# Target rules for targets named PanoWarping
 
 # Build rule for target.
-PanoWrapping: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PanoWrapping
-.PHONY : PanoWrapping
+PanoWarping: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PanoWarping
+.PHONY : PanoWarping
 
 # fast build rule for target.
-PanoWrapping/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWrapping.dir/build.make CMakeFiles/PanoWrapping.dir/build
-.PHONY : PanoWrapping/fast
+PanoWarping/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWarping.dir/build.make CMakeFiles/PanoWarping.dir/build
+.PHONY : PanoWarping/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWrapping.dir/build.make CMakeFiles/PanoWrapping.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWarping.dir/build.make CMakeFiles/PanoWarping.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -155,7 +155,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWrapping.dir/build.make CMakeFiles/PanoWrapping.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWarping.dir/build.make CMakeFiles/PanoWarping.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -163,7 +163,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWrapping.dir/build.make CMakeFiles/PanoWrapping.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PanoWarping.dir/build.make CMakeFiles/PanoWarping.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 src/config.o: src/config.cpp.o
@@ -214,53 +214,53 @@ src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/glad.c.s
 .PHONY : src/glad.c.s
 
-src/globalwrap.o: src/globalwrap.cpp.o
-.PHONY : src/globalwrap.o
+src/globalwarp.o: src/globalwarp.cpp.o
+.PHONY : src/globalwarp.o
 
 # target to build an object file
-src/globalwrap.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/globalwrap.cpp.o
-.PHONY : src/globalwrap.cpp.o
+src/globalwarp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/globalwarp.cpp.o
+.PHONY : src/globalwarp.cpp.o
 
-src/globalwrap.i: src/globalwrap.cpp.i
-.PHONY : src/globalwrap.i
+src/globalwarp.i: src/globalwarp.cpp.i
+.PHONY : src/globalwarp.i
 
 # target to preprocess a source file
-src/globalwrap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/globalwrap.cpp.i
-.PHONY : src/globalwrap.cpp.i
+src/globalwarp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/globalwarp.cpp.i
+.PHONY : src/globalwarp.cpp.i
 
-src/globalwrap.s: src/globalwrap.cpp.s
-.PHONY : src/globalwrap.s
+src/globalwarp.s: src/globalwarp.cpp.s
+.PHONY : src/globalwarp.s
 
 # target to generate assembly for a file
-src/globalwrap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/globalwrap.cpp.s
-.PHONY : src/globalwrap.cpp.s
+src/globalwarp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/globalwarp.cpp.s
+.PHONY : src/globalwarp.cpp.s
 
-src/localwrap.o: src/localwrap.cpp.o
-.PHONY : src/localwrap.o
+src/localwarp.o: src/localwarp.cpp.o
+.PHONY : src/localwarp.o
 
 # target to build an object file
-src/localwrap.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/localwrap.cpp.o
-.PHONY : src/localwrap.cpp.o
+src/localwarp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/localwarp.cpp.o
+.PHONY : src/localwarp.cpp.o
 
-src/localwrap.i: src/localwrap.cpp.i
-.PHONY : src/localwrap.i
+src/localwarp.i: src/localwarp.cpp.i
+.PHONY : src/localwarp.i
 
 # target to preprocess a source file
-src/localwrap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/localwrap.cpp.i
-.PHONY : src/localwrap.cpp.i
+src/localwarp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/localwarp.cpp.i
+.PHONY : src/localwarp.cpp.i
 
-src/localwrap.s: src/localwrap.cpp.s
-.PHONY : src/localwrap.s
+src/localwarp.s: src/localwarp.cpp.s
+.PHONY : src/localwarp.s
 
 # target to generate assembly for a file
-src/localwrap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/localwrap.cpp.s
-.PHONY : src/localwrap.cpp.s
+src/localwarp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SRC.dir/build.make CMakeFiles/SRC.dir/src/localwarp.cpp.s
+.PHONY : src/localwarp.cpp.s
 
 src/lsd.o: src/lsd.cpp.o
 .PHONY : src/lsd.o
@@ -294,7 +294,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... PanoWrapping"
+	@echo "... PanoWarping"
 	@echo "... SRC"
 	@echo "... main.o"
 	@echo "... main.i"
@@ -305,12 +305,12 @@ help:
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"
-	@echo "... src/globalwrap.o"
-	@echo "... src/globalwrap.i"
-	@echo "... src/globalwrap.s"
-	@echo "... src/localwrap.o"
-	@echo "... src/localwrap.i"
-	@echo "... src/localwrap.s"
+	@echo "... src/globalwarp.o"
+	@echo "... src/globalwarp.i"
+	@echo "... src/globalwarp.s"
+	@echo "... src/localwarp.o"
+	@echo "... src/localwarp.i"
+	@echo "... src/localwarp.s"
 	@echo "... src/lsd.o"
 	@echo "... src/lsd.i"
 	@echo "... src/lsd.s"

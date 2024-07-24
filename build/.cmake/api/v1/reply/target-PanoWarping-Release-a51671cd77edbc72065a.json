@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "PanoWrapping"
+			"path" : "PanoWarping"
 		}
 	],
 	"backtrace" : 1,
@@ -71,7 +71,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/mnt/e/CmakeDemo/PanoWrapping/include"
+					"path" : "/mnt/e/vscode/vscode_c++/PanoWarping/include"
 				},
 				{
 					"backtrace" : 4,
@@ -106,7 +106,7 @@
 			"id" : "SRC::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "PanoWrapping::@6890427a1f51a3e7e1df",
+	"id" : "PanoWarping::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -247,8 +247,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "PanoWrapping",
-	"nameOnDisk" : "PanoWrapping",
+	"name" : "PanoWarping",
+	"nameOnDisk" : "PanoWarping",
 	"paths" : 
 	{
 		"build" : ".",

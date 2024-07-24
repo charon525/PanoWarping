@@ -1,4 +1,4 @@
-#include "localwrap.h"
+#include "localwarp.h"
 #include "config.h"
 
 #define IS_MISSINGPIXEL(mask, row, col) (mask.at<uchar>(row, col) != 0)
@@ -9,7 +9,7 @@ using namespace std;
 /**
  * 获得能量矩阵
  */
-Mat LocalWrap::get_EnergyMap(const Mat& src)
+Mat Localwarp::get_EnergyMap(const Mat& src)
 {
     Mat gray;
     cvtColor(src, gray, cv::COLOR_BGR2GRAY);
@@ -56,7 +56,7 @@ Mat LocalWrap::get_EnergyMap(const Mat& src)
 /**
  * 寻找最长缺失边界，确定子图区域，返回起始和最终坐标
  */
-vector<int> LocalWrap::find_Longest_MissingBorder(const Mat& src, const Mat& mask, int& border_type) {
+vector<int> Localwarp::find_Longest_MissingBorder(const Mat& src, const Mat& mask, int& border_type) {
     int maxLength = 0, start = -1, end = -1;
     border_type = left_border;
 
@@ -119,7 +119,7 @@ vector<int> LocalWrap::find_Longest_MissingBorder(const Mat& src, const Mat& mas
 /**
  * 寻找seamPath
  */
-vector<int> LocalWrap::get_Seam_Path_Vertical(Mat src, Mat mask, int seam_type, vector<int> begin_end){
+vector<int> Localwarp::get_Seam_Path_Vertical(Mat src, Mat mask, int seam_type, vector<int> begin_end){
     int subImgRows_start = begin_end[0], subImgRows_end = begin_end[1];
     // cout<<begin_end[0]<<", "<<begin_end[1]<<endl;
     int subImgCols_start = 0, subImgCols_end = src.cols - 1;
@@ -200,7 +200,7 @@ vector<int> LocalWrap::get_Seam_Path_Vertical(Mat src, Mat mask, int seam_type, 
 /**
  * 根据seamPath移动像素
  */
-void LocalWrap::shiftPixels_BySeamPath_Vertical(Mat& src, Mat& mask, vector<int> seamPath, int seam_type, bool shift2end, vector<int> begin_end, Mat& src_SeamPaths){
+void Localwarp::shiftPixels_BySeamPath_Vertical(Mat& src, Mat& mask, vector<int> seamPath, int seam_type, bool shift2end, vector<int> begin_end, Mat& src_SeamPaths){
 
     // std::cout<<"start: "<< begin_end[0] <<", end: "<< begin_end[1] << ", seamPath[0]: " << seamPath[0]<<std::endl;
 
@@ -236,7 +236,7 @@ void LocalWrap::shiftPixels_BySeamPath_Vertical(Mat& src, Mat& mask, vector<int>
 /**
  * 更新位移场
  */
-void LocalWrap::update_displacementField(vector<vector<CoordinateInt>>& displacementField, vector<vector<CoordinateInt>>& Final_displacementField, 
+void Localwarp::update_displacementField(vector<vector<CoordinateInt>>& displacementField, vector<vector<CoordinateInt>>& Final_displacementField, 
         int seam_type, vector<int> begin_end, vector<int> seamPath, bool shift2end){
             int rows = displacementField.size(), cols = displacementField[0].size();
 
@@ -273,13 +273,13 @@ void LocalWrap::update_displacementField(vector<vector<CoordinateInt>>& displace
 /**
  * 获取位移场displacementField
  */
-vector<vector<CoordinateInt>> LocalWrap::get_displacementField(Mat& src, Mat& mask) {
+vector<vector<CoordinateInt>> Localwarp::get_displacementField(Mat& src, Mat& mask) {
     int rows = src.rows, cols = src.cols;
 
     vector<vector<CoordinateInt>> displacementField(rows, vector<CoordinateInt>(cols, CoordinateInt(0, 0)));
     vector<vector<CoordinateInt>> Final_displacementField(rows, vector<CoordinateInt>(cols, CoordinateInt(0, 0)));
 
-    cv::namedWindow("LocalWrap Process Result", cv::WINDOW_NORMAL);
+    cv::namedWindow("Localwarp Process Result", cv::WINDOW_NORMAL);
     
     Mat src_SeamPath = src.clone();
     bool processing = true;
@@ -323,7 +323,7 @@ vector<vector<CoordinateInt>> LocalWrap::get_displacementField(Mat& src, Mat& ma
             Mat combined;
             hconcat(src_display, mask_display, combined);
             // 显示合并后的图像
-            cv::imshow("LocalWrap Process Result", combined);
+            cv::imshow("Localwarp Process Result", combined);
             cv::waitKey(1);
         }
             
@@ -341,7 +341,7 @@ vector<vector<CoordinateInt>> LocalWrap::get_displacementField(Mat& src, Mat& ma
  * 放置矩形网格网
  */
 
-vector< vector<CoordinateDouble>> LocalWrap::get_rectangleMesh(Mat& src, Config config){
+vector< vector<CoordinateDouble>> Localwarp::get_rectangleMesh(Mat& src, Config config){
     int rows = config.rows, cols =  config.cols; // 图片行数， 列数
     int meshRows = config.meshRows, meshCols = config.meshCols; // 网格行数，列数
     double meshRowSize = config.meshRowSize, meshColSize = config.meshColSize; // 网格跨度(跨过的像素数目)
@@ -360,7 +360,7 @@ vector< vector<CoordinateDouble>> LocalWrap::get_rectangleMesh(Mat& src, Config 
 /**
  * 扭曲回原图像
  */
-void LocalWrap::wrap_Back(vector<vector<CoordinateDouble>>& mesh, const vector<vector<CoordinateInt>>& displacementField, const Config& config) {
+void Localwarp::warp_Back(vector<vector<CoordinateDouble>>& mesh, const vector<vector<CoordinateInt>>& displacementField, const Config& config) {
     const int meshrows = config.meshRows;
     const int meshcols = config.meshCols;
 
@@ -392,7 +392,7 @@ void LocalWrap::wrap_Back(vector<vector<CoordinateDouble>>& mesh, const vector<v
 /**
  * 绘制网格网
  */
-void LocalWrap::draw_Mesh(Mat& src, vector< vector<CoordinateDouble>>& mesh, Config config)
+void Localwarp::draw_Mesh(Mat& src, vector< vector<CoordinateDouble>>& mesh, Config config)
 {
     int meshRows = config.meshRows, meshCols = config.meshCols;
     cv::namedWindow("Src_with_Mesh", cv::WINDOW_NORMAL);
@@ -426,7 +426,7 @@ void LocalWrap::draw_Mesh(Mat& src, vector< vector<CoordinateDouble>>& mesh, Con
 /**
  * 寻找Horizontal seamPath
  */
-vector<int> LocalWrap::get_Seam_Path_Horizontal(Mat src, Mat mask, int seam_type, vector<int> begin_end){
+vector<int> Localwarp::get_Seam_Path_Horizontal(Mat src, Mat mask, int seam_type, vector<int> begin_end){
     // cout<<"get_Seam_Path_Horizontal······"<<endl;
     int subImgRows_start = 0, subImgRows_end = src.rows - 1;
     int subImgCols_start = begin_end[0], subImgCols_end = begin_end[1];
@@ -501,7 +501,7 @@ vector<int> LocalWrap::get_Seam_Path_Horizontal(Mat src, Mat mask, int seam_type
     return seamPath;
 }
 
-void LocalWrap::shiftPixels_BySeamPath_Horizontal(Mat& src, Mat& mask, vector<int> seamPath, int seam_type, bool shift2end, vector<int> begin_end, Mat& src_SeamPaths){
+void Localwarp::shiftPixels_BySeamPath_Horizontal(Mat& src, Mat& mask, vector<int> seamPath, int seam_type, bool shift2end, vector<int> begin_end, Mat& src_SeamPaths){
     int colBegin = begin_end[0], colEnd = begin_end[1];
     int rows = src.rows, cols = src.cols;
 

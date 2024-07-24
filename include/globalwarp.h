@@ -1,7 +1,7 @@
 #pragma once
 
-# ifndef GLOBALWRAP_H
-# define GLOBALWRAP_H
+# ifndef GLOBALWARP_H
+# define GLOBALWARP_H
 
 #include "config.h"
 #include <vector>
@@ -26,7 +26,7 @@ public:
     BilinearWeights(double S, double T);
 };
 
-class  GlobalWrap{
+class  Globalwarp{
 private:
     /**
      * 应用lsd算法检测源图像中的直线
@@ -135,4 +135,4 @@ public:
 
 
 
-# endif // GLOBALWRAP_H
+# endif // GLOBALwarp_H

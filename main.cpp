@@ -1,14 +1,14 @@
 #include "config.h"
-#include "localwrap.h"
-#include "globalwrap.h"
+#include "localwarp.h"
+#include "globalwarp.h"
 
 using namespace std;
 using namespace cv;
 
 Mat img;
 Config config;
-LocalWrap localwrap;
-GlobalWrap globalwrap;
+Localwarp localwarp;
+Globalwarp globalwarp;
 vector<vector<CoordinateDouble>> outputmesh;
 vector<vector<CoordinateDouble>> mesh;
 
@@ -17,7 +17,7 @@ double scale_factor = 1;
 
 
 // 纹理贴图相关
-GLuint matToTexture(cv::Mat& mat, GLenum minFilter = GL_LINEAR, GLenum magFilter = GL_LINEAR, GLenum wrapFilter = GL_CLAMP);
+GLuint matToTexture(cv::Mat& mat, GLenum minFilter = GL_LINEAR, GLenum magFilter = GL_LINEAR, GLenum warpFilter = GL_CLAMP);
 void display();
 
 // 后处理
@@ -64,44 +64,44 @@ int main(int argc, char* argv[]) {
     config = Config(src.rows, src.cols);
     cv::Mat mask = Init_Mask(src);
     
-    cout<<"Start LocalWrap ·····"<<endl;
+    cout<<"Start Localwarp ·····"<<endl;
 
     // 得到seam carving扭曲后像素位移变化矩阵并放置标准网格网
-    cv::Mat src_localwrap = src.clone(); 
-    vector< vector<CoordinateInt>> displacementField = localwrap.get_displacementField(src_localwrap, mask);  
-    cv::imwrite("../res/src_LocalWrap.png", src_localwrap);
-    mesh = localwrap.get_rectangleMesh(src_localwrap, config);
-    localwrap.draw_Mesh(src_localwrap, mesh, config);
-    cv::imwrite("../res/src_StandardMesh.png", src_localwrap);
+    cv::Mat src_localwarp = src.clone(); 
+    vector< vector<CoordinateInt>> displacementField = localwarp.get_displacementField(src_localwarp, mask);  
+    cv::imwrite("../res/src_Localwarp.png", src_localwarp);
+    mesh = localwarp.get_rectangleMesh(src_localwarp, config);
+    localwarp.draw_Mesh(src_localwarp, mesh, config);
+    cv::imwrite("../res/src_StandardMesh.png", src_localwarp);
 
     // 得到扭曲back后的网格
-    cv::Mat src_WithWrapBackMesh = src.clone();
-    localwrap.wrap_Back(mesh, displacementField, config);
-    localwrap.draw_Mesh(src_WithWrapBackMesh, mesh, config);
-    cv::imwrite("../res/src_WrapBackMesh.png", src_WithWrapBackMesh);
+    cv::Mat src_WithwarpBackMesh = src.clone();
+    localwarp.warp_Back(mesh, displacementField, config);
+    localwarp.draw_Mesh(src_WithwarpBackMesh, mesh, config);
+    cv::imwrite("../res/src_warpBackMesh.png", src_WithwarpBackMesh);
     
 
-    cout<<"Start GlobalWrap ·····"<<endl;
+    cout<<"Start Globalwarp ·····"<<endl;
     // Q demensions: 8 * quadNum, 2 * vertexNum
-    SpMat Q = globalwrap.get_SelectMatrix_Q(mesh, config);  
+    SpMat Q = globalwarp.get_SelectMatrix_Q(mesh, config);  
     // 获取shape energy的系数矩阵 
-    SpMat shapeE = globalwrap.get_ShapeE_Coeff(mesh, config);
+    SpMat shapeE = globalwarp.get_ShapeE_Coeff(mesh, config);
     
     // 初始化线段分割
     cv::Mat src_alllines = src.clone();
     vector<double> rotate_theta;
     vector<int> lineIdx_BinIdx;
     vector<double> lineIdx_theta;
-    vector< vector< vector<StraightLine>>> lineSegmentsInQuad = globalwrap.init_LineSegments(mesh, mask, src_alllines, config, lineIdx_theta, lineIdx_BinIdx, rotate_theta);
+    vector< vector< vector<StraightLine>>> lineSegmentsInQuad = globalwarp.init_LineSegments(mesh, mask, src_alllines, config, lineIdx_theta, lineIdx_BinIdx, rotate_theta);
 
     cv::Mat src_quadlines  = src.clone();
-    globalwrap.Show_StraightLines(src_quadlines, lineSegmentsInQuad, config);
+    globalwarp.Show_StraightLines(src_quadlines, lineSegmentsInQuad, config);
     cv::imwrite("../res/src_QuadLines.png", src_quadlines);
 
     // Boundary energy
     VectorXd Boundary; // 理想边界向量
     SpMat Q_boundary; // 边界坐标选择矩阵
-    globalwrap.get_BoundaryE_Matrix(mesh, config, Boundary, Q_boundary);
+    globalwarp.get_BoundaryE_Matrix(mesh, config, Boundary, Q_boundary);
     outputmesh = vector< vector<CoordinateDouble>>(config.meshRows, vector<CoordinateDouble>(config.meshCols));
     outputmesh = mesh;
     cout<< "Start Optimize Implement ······· " <<endl;
@@ -111,7 +111,7 @@ int main(int argc, char* argv[]) {
         int lineNum;
         vector< pair<MatrixXd, MatrixXd>> BiWeightsVec;
         vector<bool> bad;
-        SpMat lineE = globalwrap.get_LineE_Matrix(outputmesh, mask, rotate_theta, lineSegmentsInQuad, BiWeightsVec, 
+        SpMat lineE = globalwarp.get_LineE_Matrix(outputmesh, mask, rotate_theta, lineSegmentsInQuad, BiWeightsVec, 
             bad, lineNum, config);
         
         // printf("LineNum: %d\n", lineNum);
@@ -177,7 +177,7 @@ int main(int argc, char* argv[]) {
                 int quadIdx = i*config.quadCols + j;
                 if(lines.empty()) continue;
 
-                VectorXd Vq = globalwrap.get_Vq(outputmesh, i, j);
+                VectorXd Vq = globalwarp.get_Vq(outputmesh, i, j);
                 for(int k = 0; k < lines.size(); k++){
                     lineNum_tmp ++;
                     if(bad[lineNum_tmp]) continue;
@@ -214,7 +214,7 @@ int main(int argc, char* argv[]) {
     scale_mesh(mesh, scale_factor, scale_factor, config);
 
     // 后处理
-    cout<< "Start Post-Process and Wrap ······" <<endl;
+    cout<< "Start Post-Process and warp ······" <<endl;
     double sx_avg, sy_avg;
     post_Process(sx_avg, sy_avg);
     cout<<"Col_Scale_Factor: "<< sx_avg <<endl;
@@ -225,7 +225,7 @@ int main(int argc, char* argv[]) {
     scale_mesh(outputmesh, sy_avg, sx_avg, config);
 
     cv::Mat src_finalmesh = img.clone();
-    localwrap.draw_Mesh(src_finalmesh, outputmesh, config);
+    localwarp.draw_Mesh(src_finalmesh, outputmesh, config);
     cv::imwrite("../res/src_outputMesh.png", src_finalmesh);
 
     gettimeofday(&end, nullptr); // 记录结束时间
@@ -248,7 +248,7 @@ int main(int argc, char* argv[]) {
 }
 
 
-GLuint matToTexture(cv::Mat& mat, GLenum minFilter , GLenum magFilter , GLenum wrapFilter){
+GLuint matToTexture(cv::Mat& mat, GLenum minFilter , GLenum magFilter , GLenum warpFilter){
     GLuint textureID;
     glGenTextures(1, &textureID);
     glBindTexture(GL_TEXTURE_2D, textureID);
@@ -325,7 +325,7 @@ void display()
 
     // flip(renderedImage, renderedImage, 0);
     // // 保存渲染结果
-    // cv::imwrite("../res/src_WrapResult.png", renderedImage);
+    // cv::imwrite("../res/src_warpResult.png", renderedImage);
     
 	glutSwapBuffers();
 }

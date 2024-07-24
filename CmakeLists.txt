@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(PanoWrapping)
+project(PanoWarping)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14)
@@ -10,9 +10,9 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 set(SRC
     src/glad.c
     src/config.cpp
-    src/localwrap.cpp
+    src/localwarp.cpp
     src/lsd.cpp
-    src/globalwrap.cpp
+    src/globalwarp.cpp
     # src/optimize.cpp
 )
 

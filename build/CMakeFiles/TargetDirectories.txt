@@ -1,4 +1,4 @@
-/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles/SRC.dir
-/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles/PanoWrapping.dir
-/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles/edit_cache.dir
-/mnt/e/CmakeDemo/PanoWrapping/build/CMakeFiles/rebuild_cache.dir
+/mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles/SRC.dir
+/mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles/PanoWarping.dir
+/mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles/edit_cache.dir
+/mnt/e/vscode/vscode_c++/PanoWarping/build/CMakeFiles/rebuild_cache.dir

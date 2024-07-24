@@ -1,7 +1,7 @@
 #pragma once  //确保头文件只被编译一次
 
-#ifndef LOCALWRAPPPING_h
-#define LOCALWRAPPPING_h
+#ifndef LOCALWARPPPING_h
+#define LOCALWARPPPING_h
 
 #include <vector>
 #include <opencv2/core.hpp>
@@ -18,7 +18,7 @@ using cv::Mat;
 #define seam_horizontal 0
 #define seam_vertical 1
 
-class LocalWrap{
+class Localwarp{
 public:
 
     // 计算像素能量(边缘检测)
@@ -40,10 +40,10 @@ public:
     // 获取标准化矩阵网格
     vector< vector<CoordinateDouble>> get_rectangleMesh(Mat& src, Config config);
     // 获取变形后的网格
-    void wrap_Back(vector< vector<CoordinateDouble>>& mesh,  const vector< vector<CoordinateInt>>& displacementField, const Config& config);
+    void warp_Back(vector< vector<CoordinateDouble>>& mesh,  const vector< vector<CoordinateInt>>& displacementField, const Config& config);
 
     void draw_Mesh(Mat& src,  vector< vector<CoordinateDouble>>& mesh, Config config);
 };
 
 
-#endif //LOCALWRAPPPING_h
+#endif //LOCALwarpPPING_h

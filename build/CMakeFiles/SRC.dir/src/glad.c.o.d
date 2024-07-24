@@ -1,4 +1,5 @@
-CMakeFiles/SRC.dir/src/glad.c.o: /mnt/e/CmakeDemo/PanoWrapping/src/glad.c \
+CMakeFiles/SRC.dir/src/glad.c.o: \
+ /mnt/e/vscode/vscode_c++/PanoWarping/src/glad.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

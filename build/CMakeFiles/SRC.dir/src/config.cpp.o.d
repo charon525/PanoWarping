@@ -1,6 +1,7 @@
 CMakeFiles/SRC.dir/src/config.cpp.o: \
- /mnt/e/CmakeDemo/PanoWrapping/src/config.cpp /usr/include/stdc-predef.h \
- /mnt/e/CmakeDemo/PanoWrapping/include/config.h \
+ /mnt/e/vscode/vscode_c++/PanoWarping/src/config.cpp \
+ /usr/include/stdc-predef.h \
+ /mnt/e/vscode/vscode_c++/PanoWarping/include/config.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

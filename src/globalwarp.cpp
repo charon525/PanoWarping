@@ -1,4 +1,4 @@
-#include "globalwrap.h"
+#include "globalwarp.h"
 #include "lsd.h"
 #include "config.h"
 
@@ -11,7 +11,7 @@ BilinearWeights::BilinearWeights(double S, double T): s(S), t(T) {}
 /**
  * 应用lsd算法检测源图像中的直线
  */
-vector< StraightLine> GlobalWrap::detect_Src_StraightLines(const Mat& src, const Mat& mask){
+vector< StraightLine> Globalwarp::detect_Src_StraightLines(const Mat& src, const Mat& mask){
     Mat src_gray;
     cvtColor(src, src_gray, COLOR_BGR2GRAY);
     
@@ -58,7 +58,7 @@ vector< StraightLine> GlobalWrap::detect_Src_StraightLines(const Mat& src, const
 /**
  * 判断点point是否在quad内部
  */
-bool GlobalWrap::is_PointInside_Quad(const CoordinateDouble& point, const vector<CoordinateDouble>& quadVertexes){
+bool Globalwarp::is_PointInside_Quad(const CoordinateDouble& point, const vector<CoordinateDouble>& quadVertexes){
     Vector2d topLeft(quadVertexes[0].col, quadVertexes[0].row);
     Vector2d topRight(quadVertexes[1].col, quadVertexes[1].row);
     Vector2d bottomLeft(quadVertexes[2].col, quadVertexes[2].row);
@@ -87,7 +87,7 @@ bool GlobalWrap::is_PointInside_Quad(const CoordinateDouble& point, const vector
     return !(has_neg && has_pos) || on_boundary;
 }
 
-bool GlobalWrap::is_LineSegments_Intersect(const StraightLine& line1, const StraightLine& line2, CoordinateDouble& intersection) {
+bool Globalwarp::is_LineSegments_Intersect(const StraightLine& line1, const StraightLine& line2, CoordinateDouble& intersection) {
     double p1_x = line1.p1.col, p1_y = line1.p1.row, p2_x = line1.p2.col, p2_y = line1.p2.row;
     double p3_x = line2.p1.col, p3_y = line2.p1.row, p4_x = line2.p2.col, p4_y = line2.p2.row;
 
@@ -172,7 +172,7 @@ bool GlobalWrap::is_LineSegments_Intersect(const StraightLine& line1, const Stra
 /**
  * 计算 直线 与 quad 的交点
  */
-vector< CoordinateDouble> GlobalWrap::get_IntersectionWithQuad(const StraightLine& line, const vector<CoordinateDouble>& quadVertexes){
+vector< CoordinateDouble> Globalwarp::get_IntersectionWithQuad(const StraightLine& line, const vector<CoordinateDouble>& quadVertexes){
     vector< CoordinateDouble> intersections;
     CoordinateDouble topLeftPoint = quadVertexes[0], topRightPoint = quadVertexes[1], bottomLeftPoint = quadVertexes[2], bottomRightPoint = quadVertexes[3];
     vector< StraightLine> quadBoundaries = { StraightLine(topLeftPoint, topRightPoint), 
@@ -193,7 +193,7 @@ double cross(CoordinateDouble a, CoordinateDouble b){ return a.col*b.row - a.row
 /**
  * 计算 点point与quad的双线性插值系数
  */
-BilinearWeights GlobalWrap::get_BiWeights_PointQuad(const CoordinateDouble& point, const vector<CoordinateDouble>& quadVertexes){
+BilinearWeights Globalwarp::get_BiWeights_PointQuad(const CoordinateDouble& point, const vector<CoordinateDouble>& quadVertexes){
     CoordinateDouble p1 = quadVertexes[0], p2 = quadVertexes[1], p3 = quadVertexes[2], p4 = quadVertexes[3];
     double eps = 1e-6;
 
@@ -290,7 +290,11 @@ BilinearWeights GlobalWrap::get_BiWeights_PointQuad(const CoordinateDouble& poin
 	else
 	{
 		double w = k1 * k1 - 4.0*k0*k2;
+        if(w <= 0.0){
+            return BilinearWeights(-1.0, -1.0);
+        } 
 		assert(w >= 0.0);
+        
 		w = sqrt(w);
 
 		double v1 = (-k1 - w) / (2.0*k2);
@@ -316,7 +320,7 @@ BilinearWeights GlobalWrap::get_BiWeights_PointQuad(const CoordinateDouble& poin
 /**
  * 根据BilinearWeights中的s和t值,计算出4个权重系数v1w、v2w、v3w、v4w,并将它们填充到一个2x8的矩阵。
  */
-MatrixXd GlobalWrap::BilinearWeights2Matrix(BilinearWeights& w){
+MatrixXd Globalwarp::BilinearWeights2Matrix(BilinearWeights& w){
     MatrixXd mat(2, 8);
     double v1w = 1 - w.s - w.t + w.s * w.t;//1-s-t-st
 	double v2w = w.s - w.s * w.t;//s-st
@@ -330,7 +334,7 @@ MatrixXd GlobalWrap::BilinearWeights2Matrix(BilinearWeights& w){
 /**
  * 在原矩阵上按对角进行扩展,即矩阵的合并,返回扩展之后的矩阵
  */
-SpMat GlobalWrap::SpMat_extendByDiagonal(const SpMat& mat, const MatrixXd& add, int QuadIdx, const Config& config) {
+SpMat Globalwarp::SpMat_extendByDiagonal(const SpMat& mat, const MatrixXd& add, int QuadIdx, const Config& config) {
     int total_cols = 8 * config.quadRows * config.quadCols;
     SpMat res(mat.rows() + add.rows(), total_cols);
 
@@ -364,7 +368,7 @@ SpMat GlobalWrap::SpMat_extendByDiagonal(const SpMat& mat, const MatrixXd& add, 
 /**
  * 获取shape energy的系数矩阵
  */
-SpMat GlobalWrap::get_ShapeE_Coeff(const vector< vector<CoordinateDouble>>& mesh, const Config& config){
+SpMat Globalwarp::get_ShapeE_Coeff(const vector< vector<CoordinateDouble>>& mesh, const Config& config){
     int meshRows = config.meshRows, meshCols = config.meshCols;
     int quadRows = config.quadRows, quadCols = config.quadCols;
 
@@ -414,7 +418,7 @@ SpMat GlobalWrap::get_ShapeE_Coeff(const vector< vector<CoordinateDouble>>& mesh
      * preprocess line 
      * 裁剪直线段，让直线段位于quad内部
      */
-    vector< vector< vector<StraightLine>>> GlobalWrap::cut_LineSegmentsWithQuad(const vector< vector<CoordinateDouble>>& mesh, 
+    vector< vector< vector<StraightLine>>> Globalwarp::cut_LineSegmentsWithQuad(const vector< vector<CoordinateDouble>>& mesh, 
         vector<StraightLine>& lines, const Config& config){
             int quadRows = config.quadRows, quadCols = config.quadCols;
 
@@ -465,7 +469,7 @@ SpMat GlobalWrap::get_ShapeE_Coeff(const vector< vector<CoordinateDouble>>& mesh
  * preprocess line 
  * 初始化线段分割,将倾斜角度位于同一个bin的线段分配到一个集合中
  */
-vector< vector< vector<StraightLine>>> GlobalWrap::init_LineSegments(const vector< vector<CoordinateDouble>>& mesh, cv::Mat& mask, cv::Mat&src, const Config& config,
+vector< vector< vector<StraightLine>>> Globalwarp::init_LineSegments(const vector< vector<CoordinateDouble>>& mesh, cv::Mat& mask, cv::Mat&src, const Config& config,
         vector< double> &lineIdx_Theta, vector<int>& lineIdx_BinIdx, vector<double>& rotate_theta){
             double thetaPerbin = PI / config.thetaBins;
 
@@ -491,7 +495,7 @@ vector< vector< vector<StraightLine>>> GlobalWrap::init_LineSegments(const vecto
 /**
  * 获取(row, col)处的坐标向量
  */
-VectorXd GlobalWrap::get_Vq(const vector< vector<CoordinateDouble>>& mesh, int i, int j){
+VectorXd Globalwarp::get_Vq(const vector< vector<CoordinateDouble>>& mesh, int i, int j){
     VectorXd Vq(8);
     CoordinateDouble p0 = mesh[i][j], p1 = mesh[i][j+1], p2 = mesh[i+1][j+1], p3 = mesh[i+1][j];
     Vq << p0.col, p0.row, p1.col, p1.row, p2.col, p2.row, p3.col, p3.row;
@@ -502,7 +506,7 @@ VectorXd GlobalWrap::get_Vq(const vector< vector<CoordinateDouble>>& mesh, int i
  * line energy
  * 获取直线保持函数的系数矩阵 C
  */
-SpMat GlobalWrap::get_LineE_Matrix(const vector< vector<CoordinateDouble>>& mesh, Mat& mask, vector<double>& rotate_theta, 
+SpMat Globalwarp::get_LineE_Matrix(const vector< vector<CoordinateDouble>>& mesh, Mat& mask, vector<double>& rotate_theta, 
         vector< vector< vector<StraightLine>>>& lineSegmentsInQuad, vector<pair<MatrixXd, MatrixXd>>& BiWeightsVec,
         vector<bool>& bad, int& lineNum, const Config& config ){
             lineNum = -1; 
@@ -572,7 +576,7 @@ SpMat GlobalWrap::get_LineE_Matrix(const vector< vector<CoordinateDouble>>& mesh
 /**
  * 获取边界能量矩阵参数
  */
-void GlobalWrap::get_BoundaryE_Matrix(const vector< vector<CoordinateDouble>>& mesh, const Config& config, VectorXd& Boundary, SpMat& Q_boundary) {
+void Globalwarp::get_BoundaryE_Matrix(const vector< vector<CoordinateDouble>>& mesh, const Config& config, VectorXd& Boundary, SpMat& Q_boundary) {
     int meshRows = config.meshRows, meshCols = config.meshCols;
     int quadRows = config.quadRows, quadCols = config.quadCols;
     int vertexNum = meshCols * meshRows;
@@ -612,7 +616,7 @@ void GlobalWrap::get_BoundaryE_Matrix(const vector< vector<CoordinateDouble>>& m
 /**
  * 获取选择矩阵Q
  */
-SpMat GlobalWrap::get_SelectMatrix_Q(const vector< vector<CoordinateDouble>>& mesh, const Config& config){
+SpMat Globalwarp::get_SelectMatrix_Q(const vector< vector<CoordinateDouble>>& mesh, const Config& config){
     int meshRows = config.meshRows, meshCols = config.meshCols;
     int quadRows = config.quadRows, quadCols = config.quadCols;
 
@@ -651,7 +655,7 @@ SpMat GlobalWrap::get_SelectMatrix_Q(const vector< vector<CoordinateDouble>>& me
 /**
  * 可视化Straight line
  */
-void GlobalWrap::Show_StraightLines(cv::Mat src, vector< vector< vector<StraightLine>>>& lineSegmentsInQuad, const Config& config){
+void Globalwarp::Show_StraightLines(cv::Mat src, vector< vector< vector<StraightLine>>>& lineSegmentsInQuad, const Config& config){
     for(int i=0; i<config.quadRows; i++){
         for(int j=0; j<config.quadCols; j++){
             for (int k = 0; k < lineSegmentsInQuad[i][j].size(); k++) {

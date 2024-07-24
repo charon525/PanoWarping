@@ -1,32 +1,32 @@
 [
 {
-  "directory": "/mnt/e/CmakeDemo/PanoWrapping/build",
-  "command": "/usr/bin/cc  -I/mnt/e/CmakeDemo/PanoWrapping/include -I/usr/local/include/opencv4 -I/usr/include/eigen3 -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/SRC.dir/src/glad.c.o -c /mnt/e/CmakeDemo/PanoWrapping/src/glad.c",
-  "file": "/mnt/e/CmakeDemo/PanoWrapping/src/glad.c"
+  "directory": "/mnt/e/vscode/vscode_c++/PanoWarping/build",
+  "command": "/usr/bin/cc  -I/mnt/e/vscode/vscode_c++/PanoWarping/include -I/usr/local/include/opencv4 -I/usr/include/eigen3 -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/SRC.dir/src/glad.c.o -c /mnt/e/vscode/vscode_c++/PanoWarping/src/glad.c",
+  "file": "/mnt/e/vscode/vscode_c++/PanoWarping/src/glad.c"
 },
 {
-  "directory": "/mnt/e/CmakeDemo/PanoWrapping/build",
-  "command": "/usr/bin/c++  -I/mnt/e/CmakeDemo/PanoWrapping/include -I/usr/local/include/opencv4 -I/usr/include/eigen3 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/SRC.dir/src/config.cpp.o -c /mnt/e/CmakeDemo/PanoWrapping/src/config.cpp",
-  "file": "/mnt/e/CmakeDemo/PanoWrapping/src/config.cpp"
+  "directory": "/mnt/e/vscode/vscode_c++/PanoWarping/build",
+  "command": "/usr/bin/c++  -I/mnt/e/vscode/vscode_c++/PanoWarping/include -I/usr/local/include/opencv4 -I/usr/include/eigen3 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/SRC.dir/src/config.cpp.o -c /mnt/e/vscode/vscode_c++/PanoWarping/src/config.cpp",
+  "file": "/mnt/e/vscode/vscode_c++/PanoWarping/src/config.cpp"
 },
 {
-  "directory": "/mnt/e/CmakeDemo/PanoWrapping/build",
-  "command": "/usr/bin/c++  -I/mnt/e/CmakeDemo/PanoWrapping/include -I/usr/local/include/opencv4 -I/usr/include/eigen3 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/SRC.dir/src/localwrap.cpp.o -c /mnt/e/CmakeDemo/PanoWrapping/src/localwrap.cpp",
-  "file": "/mnt/e/CmakeDemo/PanoWrapping/src/localwrap.cpp"
+  "directory": "/mnt/e/vscode/vscode_c++/PanoWarping/build",
+  "command": "/usr/bin/c++  -I/mnt/e/vscode/vscode_c++/PanoWarping/include -I/usr/local/include/opencv4 -I/usr/include/eigen3 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/SRC.dir/src/localwarp.cpp.o -c /mnt/e/vscode/vscode_c++/PanoWarping/src/localwarp.cpp",
+  "file": "/mnt/e/vscode/vscode_c++/PanoWarping/src/localwarp.cpp"
 },
 {
-  "directory": "/mnt/e/CmakeDemo/PanoWrapping/build",
-  "command": "/usr/bin/c++  -I/mnt/e/CmakeDemo/PanoWrapping/include -I/usr/local/include/opencv4 -I/usr/include/eigen3 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/SRC.dir/src/lsd.cpp.o -c /mnt/e/CmakeDemo/PanoWrapping/src/lsd.cpp",
-  "file": "/mnt/e/CmakeDemo/PanoWrapping/src/lsd.cpp"
+  "directory": "/mnt/e/vscode/vscode_c++/PanoWarping/build",
+  "command": "/usr/bin/c++  -I/mnt/e/vscode/vscode_c++/PanoWarping/include -I/usr/local/include/opencv4 -I/usr/include/eigen3 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/SRC.dir/src/lsd.cpp.o -c /mnt/e/vscode/vscode_c++/PanoWarping/src/lsd.cpp",
+  "file": "/mnt/e/vscode/vscode_c++/PanoWarping/src/lsd.cpp"
 },
 {
-  "directory": "/mnt/e/CmakeDemo/PanoWrapping/build",
-  "command": "/usr/bin/c++  -I/mnt/e/CmakeDemo/PanoWrapping/include -I/usr/local/include/opencv4 -I/usr/include/eigen3 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/SRC.dir/src/globalwrap.cpp.o -c /mnt/e/CmakeDemo/PanoWrapping/src/globalwrap.cpp",
-  "file": "/mnt/e/CmakeDemo/PanoWrapping/src/globalwrap.cpp"
+  "directory": "/mnt/e/vscode/vscode_c++/PanoWarping/build",
+  "command": "/usr/bin/c++  -I/mnt/e/vscode/vscode_c++/PanoWarping/include -I/usr/local/include/opencv4 -I/usr/include/eigen3 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/SRC.dir/src/globalwarp.cpp.o -c /mnt/e/vscode/vscode_c++/PanoWarping/src/globalwarp.cpp",
+  "file": "/mnt/e/vscode/vscode_c++/PanoWarping/src/globalwarp.cpp"
 },
 {
-  "directory": "/mnt/e/CmakeDemo/PanoWrapping/build",
-  "command": "/usr/bin/c++  -I/mnt/e/CmakeDemo/PanoWrapping/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/PanoWrapping.dir/main.cpp.o -c /mnt/e/CmakeDemo/PanoWrapping/main.cpp",
-  "file": "/mnt/e/CmakeDemo/PanoWrapping/main.cpp"
+  "directory": "/mnt/e/vscode/vscode_c++/PanoWarping/build",
+  "command": "/usr/bin/c++  -I/mnt/e/vscode/vscode_c++/PanoWarping/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++14 -o CMakeFiles/PanoWarping.dir/main.cpp.o -c /mnt/e/vscode/vscode_c++/PanoWarping/main.cpp",
+  "file": "/mnt/e/vscode/vscode_c++/PanoWarping/main.cpp"
 }
 ]

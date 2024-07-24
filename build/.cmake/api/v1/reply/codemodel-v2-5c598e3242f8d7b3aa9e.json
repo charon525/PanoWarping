@@ -28,7 +28,7 @@
 					[
 						0
 					],
-					"name" : "PanoWrapping",
+					"name" : "PanoWarping",
 					"targetIndexes" : 
 					[
 						0,
@@ -40,15 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "PanoWrapping::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-PanoWrapping-Release-216c31d390b44db8e121.json",
-					"name" : "PanoWrapping",
+					"id" : "PanoWarping::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PanoWarping-Release-a51671cd77edbc72065a.json",
+					"name" : "PanoWarping",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "SRC::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SRC-Release-3c1be0d25af3c788f9ab.json",
+					"jsonFile" : "target-SRC-Release-cd0907f004ce9e3bb130.json",
 					"name" : "SRC",
 					"projectIndex" : 0
 				}
@@ -58,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/mnt/e/CmakeDemo/PanoWrapping/build",
-		"source" : "/mnt/e/CmakeDemo/PanoWrapping"
+		"build" : "/mnt/e/vscode/vscode_c++/PanoWarping/build",
+		"source" : "/mnt/e/vscode/vscode_c++/PanoWarping"
 	},
 	"version" : 
 	{
