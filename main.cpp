@@ -49,6 +49,8 @@ int main(int argc, char* argv[]) {
         return -1;
     }
     printf("ImageSize: （%d, %d）\n", img.cols, img.rows);
+    if(img.cols * img.rows >= 5 * 1e5) scale_factor = int((img.cols * img.rows) / (5 * 1e5)) + 1;
+    // cout<<scale_factor<<endl;
     cv::imshow("original image", img);
     cv::waitKey(0);
     cv::destroyAllWindows();
@@ -314,7 +316,7 @@ void display()
 	}
     
 	glDisable(GL_TEXTURE_2D);
-    // 创建一个Mat对象来存储渲染结果
+    // // 创建一个Mat对象来存储渲染结果
     // cv::Mat renderedImage(img.rows, img.cols, CV_8UC3);
 
     // // 从OpenGL帧缓冲区读取像素数据
