@@ -114,28 +114,26 @@ int main(int argc, char* argv[]) {
         SpMat lineE = globalwarp.get_LineE_Matrix(outputmesh, mask, rotate_theta, lineSegmentsInQuad, BiWeightsVec, 
             bad, lineNum, config);
         
+        int valid_LineNum = std::count(bad.begin(), bad.end(), false);
         // printf("LineNum: %d\n", lineNum);
         double quadNum = config.quadRows * config.quadCols;
         double LambdaL = config.LambdaL;
         double LambdaB = config.LambdaB;
         double LambdaS = config.LambdaS;
         SpMat shape = (LambdaS / sqrt(quadNum)) * (shapeE * Q);  // 8 * quadNum, 2 * vertexNum
-        SpMat line = sqrt((LambdaL / lineNum)) * (lineE * Q); // 2 * lineNum, 2 * vertexNum
+        SpMat line = sqrt((LambdaL  / (valid_LineNum))) * (lineE * Q); // 2 * lineNum, 2 * vertexNum
         SpMat boundary = sqrt(LambdaB) * Q_boundary; // 2 * vertexNum, 2 * vertexNum
 
         // 按行合并三个矩阵
         SpMat shape_line = mergeMatricesByRow(shape, line);
         SpMat shape_line_boundary = mergeMatricesByRow(shape_line, boundary);
 
-        VectorXd Bounary_all = VectorXd::Zero(shape_line_boundary.rows());
-        Bounary_all.tail(Boundary.size()) = sqrt(LambdaB) * Boundary;
-
         // update V
         // 1.
-        // SpMat A = shape_line_boundary.transpose() * shape_line_boundary; // 2 * vertexNum, 2 * vertexNum
-        // VectorXd b = shape_line_boundary.transpose() * Bounary_all;  // 2 * vertexNum, 1
-        // Eigen::SimplicialCholesky<SpMat> solver(A);
-        // VectorXd V = solver.solve(b);
+        SpMat A = shape_line_boundary.transpose() * shape_line_boundary; // 2 * vertexNum, 2 * vertexNum
+        VectorXd b = LambdaB * Boundary;  // 2 * vertexNum, 1
+        Eigen::SimplicialCholesky<SpMat> solver(A);
+        VectorXd V = solver.solve(b);
         // 2.
         // SpMat s_l_b_T = shape_line_boundary.transpose();
         // MatrixXd tmp = s_l_b_T * shape_line_boundary;
@@ -150,11 +148,11 @@ int main(int argc, char* argv[]) {
         // solver.compute(A_T_A);
         // VectorXd V = solver.solve(A_T_b);
         // 4.
-        SpMat A = shape_line_boundary.transpose() * shape_line_boundary; // 2 * vertexNum, 2 * vertexNum
-        VectorXd b = shape_line_boundary.transpose() * Bounary_all;  // 2 * vertexNum, 1
-        Eigen::SparseQR<SpMat, Eigen::COLAMDOrdering<int>> solver;
-        solver.compute(A);
-        VectorXd V = solver.solve(b);
+        // SpMat A = shape_line_boundary.transpose() * shape_line_boundary; // 2 * vertexNum, 2 * vertexNum
+        // VectorXd b = shape_line_boundary.transpose() * Bounary_all;  // 2 * vertexNum, 1
+        // Eigen::SparseQR<SpMat, Eigen::COLAMDOrdering<int>> solver;
+        // solver.compute(A);
+        // VectorXd V = solver.solve(b);
 
 
         for (int i = 0; i < config.meshRows; i++)

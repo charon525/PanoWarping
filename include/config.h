@@ -12,6 +12,7 @@
 #include <cmath>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 #include <Eigen/SparseCholesky>
 #include <Eigen/Sparse> // 稀疏矩阵
@@ -35,7 +36,7 @@ class Config{
 public:
     int thetaBins = 50;
     int iters = 10; // 迭代次数 
-    double LambdaS = 10, LambdaL = 1000, LambdaB = 1e8;
+    double LambdaS = 1, LambdaL = 100, LambdaB = 1e8;
     int meshRows = 20, meshCols = 20; // 网格行数，列数
 
 
