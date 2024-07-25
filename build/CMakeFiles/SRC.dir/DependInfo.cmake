@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/e/vscode/vscode_c++/PanoWarping/src/glad.c" "CMakeFiles/SRC.dir/src/glad.c.o" "gcc" "CMakeFiles/SRC.dir/src/glad.c.o.d"
-  "/mnt/e/vscode/vscode_c++/PanoWarping/src/config.cpp" "CMakeFiles/SRC.dir/src/config.cpp.o" "gcc" "CMakeFiles/SRC.dir/src/config.cpp.o.d"
-  "/mnt/e/vscode/vscode_c++/PanoWarping/src/globalwarp.cpp" "CMakeFiles/SRC.dir/src/globalwarp.cpp.o" "gcc" "CMakeFiles/SRC.dir/src/globalwarp.cpp.o.d"
-  "/mnt/e/vscode/vscode_c++/PanoWarping/src/localwarp.cpp" "CMakeFiles/SRC.dir/src/localwarp.cpp.o" "gcc" "CMakeFiles/SRC.dir/src/localwarp.cpp.o.d"
-  "/mnt/e/vscode/vscode_c++/PanoWarping/src/lsd.cpp" "CMakeFiles/SRC.dir/src/lsd.cpp.o" "gcc" "CMakeFiles/SRC.dir/src/lsd.cpp.o.d"
+  "/mnt/e/CmakeDemo/PanoWarping/src/glad.c" "CMakeFiles/SRC.dir/src/glad.c.o" "gcc" "CMakeFiles/SRC.dir/src/glad.c.o.d"
+  "/mnt/e/CmakeDemo/PanoWarping/src/config.cpp" "CMakeFiles/SRC.dir/src/config.cpp.o" "gcc" "CMakeFiles/SRC.dir/src/config.cpp.o.d"
+  "/mnt/e/CmakeDemo/PanoWarping/src/globalwarp.cpp" "CMakeFiles/SRC.dir/src/globalwarp.cpp.o" "gcc" "CMakeFiles/SRC.dir/src/globalwarp.cpp.o.d"
+  "/mnt/e/CmakeDemo/PanoWarping/src/localwarp.cpp" "CMakeFiles/SRC.dir/src/localwarp.cpp.o" "gcc" "CMakeFiles/SRC.dir/src/localwarp.cpp.o.d"
+  "/mnt/e/CmakeDemo/PanoWarping/src/lsd.cpp" "CMakeFiles/SRC.dir/src/lsd.cpp.o" "gcc" "CMakeFiles/SRC.dir/src/lsd.cpp.o.d"
   )
 
 # Targets to which this target links.

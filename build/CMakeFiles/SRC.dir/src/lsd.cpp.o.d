@@ -1,6 +1,6 @@
 CMakeFiles/SRC.dir/src/lsd.cpp.o: \
- /mnt/e/vscode/vscode_c++/PanoWarping/src/lsd.cpp \
- /usr/include/stdc-predef.h /usr/include/stdio.h \
+ /mnt/e/CmakeDemo/PanoWarping/src/lsd.cpp /usr/include/stdc-predef.h \
+ /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -82,4 +82,4 @@ CMakeFiles/SRC.dir/src/lsd.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
- /mnt/e/vscode/vscode_c++/PanoWarping/include/lsd.h
+ /mnt/e/CmakeDemo/PanoWarping/include/lsd.h

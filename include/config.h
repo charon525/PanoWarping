@@ -36,7 +36,7 @@ class Config{
 public:
     int thetaBins = 50;
     int iters = 10; // 迭代次数 
-    double LambdaS = 1, LambdaL = 100, LambdaB = 1e8;
+    double LambdaS = 5, LambdaL = 100, LambdaB = 1e8;
     int meshRows = 20, meshCols = 20; // 网格行数，列数
 
 

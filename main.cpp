@@ -48,10 +48,10 @@ int main(int argc, char* argv[]) {
         cout << "Error: Could not read the image." << endl;
         return -1;
     }
-    
     printf("ImageSize: （%d, %d）\n", img.cols, img.rows);
     cv::imshow("original image", img);
     cv::waitKey(0);
+    cv::destroyAllWindows();
 
 
     struct timeval start, end;
@@ -111,37 +111,40 @@ int main(int argc, char* argv[]) {
         int lineNum;
         vector< pair<MatrixXd, MatrixXd>> BiWeightsVec;
         vector<bool> bad;
-        SpMat lineE = globalwarp.get_LineE_Matrix(outputmesh, mask, rotate_theta, lineSegmentsInQuad, BiWeightsVec, 
+        SpMat lineE = globalwarp.get_LineE_Matrix(mesh, mask, rotate_theta, lineSegmentsInQuad, BiWeightsVec, 
             bad, lineNum, config);
         
         int valid_LineNum = std::count(bad.begin(), bad.end(), false);
-        // printf("LineNum: %d\n", lineNum);
+        // printf("valid_LineNum: %d\n", valid_LineNum);
         double quadNum = config.quadRows * config.quadCols;
         double LambdaL = config.LambdaL;
         double LambdaB = config.LambdaB;
         double LambdaS = config.LambdaS;
+
         SpMat shape = (LambdaS / sqrt(quadNum)) * (shapeE * Q);  // 8 * quadNum, 2 * vertexNum
-        SpMat line = sqrt((LambdaL  / (valid_LineNum))) * (lineE * Q); // 2 * lineNum, 2 * vertexNum
+        SpMat line = sqrt((LambdaL  / valid_LineNum)) * (lineE * Q); // 2 * lineNum, 2 * vertexNum
         SpMat boundary = sqrt(LambdaB) * Q_boundary; // 2 * vertexNum, 2 * vertexNum
 
         // 按行合并三个矩阵
         SpMat shape_line = mergeMatricesByRow(shape, line);
         SpMat shape_line_boundary = mergeMatricesByRow(shape_line, boundary);
 
+        // VectorXd b_tmp = VectorXd::Zero(shape_line_boundary.rows());
+        // b_tmp.tail(Boundary.rows()) = sqrt(LambdaB) * Boundary;
         // update V
         // 1.
         SpMat A = shape_line_boundary.transpose() * shape_line_boundary; // 2 * vertexNum, 2 * vertexNum
-        VectorXd b = LambdaB * Boundary;  // 2 * vertexNum, 1
+        VectorXd b = boundary.transpose() * (sqrt(LambdaB) * Boundary);// shape_line_boundary.transpose() * b_tmp;  // 2 * vertexNum, 1
         Eigen::SimplicialCholesky<SpMat> solver(A);
         VectorXd V = solver.solve(b);
         // 2.
         // SpMat s_l_b_T = shape_line_boundary.transpose();
         // MatrixXd tmp = s_l_b_T * shape_line_boundary;
-        // VectorXd V = tmp.inverse() * shape_line_boundary.transpose() * Bounary_all;
+        // VectorXd b = boundary.transpose() * (sqrt(LambdaB) * Boundary);
         // 3.
         // SpMat A = shape_line_boundary.transpose() * shape_line_boundary; // 2 * vertexNum, 2 * vertexNum
         // SpMat A_T = A.transpose();
-        // VectorXd b = shape_line_boundary.transpose() * Bounary_all;  // 2 * vertexNum, 1
+        // VectorXd b = boundary.transpose() * (sqrt(LambdaB) * Boundary); // 2 * vertexNum, 1
         // SpMat A_T_A = A_T * A;
         // VectorXd A_T_b = A_T * b;
         // Eigen::SimplicialLDLT<SpMat> solver;
@@ -149,14 +152,13 @@ int main(int argc, char* argv[]) {
         // VectorXd V = solver.solve(A_T_b);
         // 4.
         // SpMat A = shape_line_boundary.transpose() * shape_line_boundary; // 2 * vertexNum, 2 * vertexNum
-        // VectorXd b = shape_line_boundary.transpose() * Bounary_all;  // 2 * vertexNum, 1
+        // VectorXd b = boundary.transpose() * (sqrt(LambdaB) * Boundary);  // 2 * vertexNum, 1
         // Eigen::SparseQR<SpMat, Eigen::COLAMDOrdering<int>> solver;
         // solver.compute(A);
         // VectorXd V = solver.solve(b);
 
 
-        for (int i = 0; i < config.meshRows; i++)
-        {
+        for (int i = 0; i < config.meshRows; i++){
             for (int j = 0; j < config.meshCols; j++)
             {   
                 int curIdx = (i * config.meshCols + j) * 2;
@@ -200,8 +202,8 @@ int main(int argc, char* argv[]) {
         }
 
         // 计算theta均值
-        for(int t = 0; t < thetaBin.size(); t++) thetaBin[t] /= thetaBinCnt[t];
-        for(int t = 0; t < rotate_theta.size(); t++) rotate_theta[t] = thetaBin[lineIdx_BinIdx[t]];
+        // for(int t = 0; t < thetaBin.size(); t++) thetaBin[t] /= thetaBinCnt[t];
+        for(int t = 0; t < rotate_theta.size(); t++) rotate_theta[t] = thetaBin[lineIdx_BinIdx[t]] / thetaBinCnt[lineIdx_BinIdx[t]];
         // 更新进度条
         printProgressBar(iter + 1, config.iters);
     }
