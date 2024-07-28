@@ -216,7 +216,7 @@ int main(int argc, char* argv[]) {
     scale_mesh(mesh, scale_factor, scale_factor, config);
 
     // 后处理
-    cout<< "Start Post-Process and warp ······" <<endl;
+    cout<< "Start Stretching-Reduction and Warp ······" <<endl;
     double sx_avg, sy_avg;
     post_Process(sx_avg, sy_avg);
     cout<<"Col_Scale_Factor: "<< sx_avg <<endl;
